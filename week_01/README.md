@@ -1,6 +1,5 @@
 
 <h1>Rebecca Connie </h1>
-Upload a scanned image of your Data Selfie done in class.
 
 
 ![IMG_8352](https://user-images.githubusercontent.com/59779620/192915672-99aef06b-1bca-472b-94ce-d5eb6bdd8841.JPG)
