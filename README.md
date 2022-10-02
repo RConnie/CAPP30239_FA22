@@ -1,9 +1,4 @@
-# CAPP30239_FA22
-The root level README.md should contain information about the repository, such as dates, descriptions, images, a general overview of what is included in the repository, and how the code should be used.
+Last updated: 2 Ocotber 2022
 
+This repo is being used for a Univeristy of Chiacgo's Data Visualization course (CAPP30239_FA22).  The code is used for class assignments and for use as the owner's portfolio.  This file will be updated as the course progresses.  At this time it is not open to contributions outside of the University.
 
-What the project does
-Why the project is useful
-How users can get started with the project
-Where users can get help with your project
-Who maintains and contributes to the project
