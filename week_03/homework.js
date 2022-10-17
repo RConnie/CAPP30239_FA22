@@ -1,19 +1,19 @@
-/* */
 
 d3.csv("library_visits_jan22.csv").then(data => {
-    
+    /*created a for loop to run through the rows of data in library csv 
+    selecting the colum of num (# of library visits */
     for (let d of data) {
         d.num = +d.num
     };
-    
+    //setting the dimensions of the bar graph 
     const  height = 400,
             width = 600,
             margin = ({top: 25, right: 30, bottom: 35, left: 50});
-
+    //creating a svg object and creating a viewbox
     let svg = d3.select("#chart")
                 .append("svg")
                 .attr("viewbox", [0, 0, width, height]);
-    
+    //
     const x = d3.scaleBand()
                 .domain(data.map(d =>d.branch))
                 .range([margin.left, width - margin.right])
@@ -27,7 +27,6 @@ d3.csv("library_visits_jan22.csv").then(data => {
     const xAxis = g => g
         .attr("transform", `translate(0, ${height - margin.bottom + 5})`)
         .call(d3.axisBottom(x));
-        //.call(g => g.select(".domain").remove())
     
     const yAxis = g => g
         .attr("transform", `translate(${margin.left-5}, 0)`)
@@ -46,7 +45,7 @@ d3.csv("library_visits_jan22.csv").then(data => {
         .attr("class", "bar");
 
     bar.append('rect')
-        .attr("fill", "steelblue")
+        .attr("fill", "purple")
         .attr("x", d => x(d.branch))
         .attr("width", x.bandwidth())
         .attr("y", d => y(d.num))
