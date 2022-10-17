@@ -45,7 +45,7 @@ d3.csv("library_visits_jan22.csv").then(data => {
         .attr("class", "bar");
 
     bar.append('rect')
-        .attr("fill", "purple")
+        .attr("fill", "green")
         .attr("x", d => x(d.branch))
         .attr("width", x.bandwidth())
         .attr("y", d => y(d.num))
