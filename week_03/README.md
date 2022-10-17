@@ -1,20 +1,34 @@
+
+
+
+
+<h1>Data sources: </h1>
+Netflix Movies and TV Shows (netflix_titles.csv)
 https://www.kaggle.com/datasets/shivamb/netflix-shows
+Taken from Kaggle, created by user Shivam Bansal, downloaded 14 October 2022, last updated in 2021
+
+Amazon Prime Movies and TV Shows (amazon_prime_titles.csv)
+https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows
+Taken from Kaggle, created by user Shivam Bansal, downloaded 14 October 2022, last updated in 2021
+
+Disney Plus Movies and TV Shows (disney_plus_titles.csv)
+https://www.kaggle.com/datasets/shivamb/disney-movies-and-tv-shows
+Taken from Kaggle, created by user Shivam Bansal, downloaded 14 October 2022, last updated in 2021
+
+Hulu Movies and TV Shows (hulu_titles.csv)
+https://www.kaggle.com/datasets/shivamb/hulu-movies-and-tv-shows
+Taken from Kaggle, created by user Shivam Bansal, downloaded 14 October 2022, last updated in 2021
+
+Most Subscribed Yoututbe Channels (most_subscribed_youtube_channels.csv)
 https://www.kaggle.com/datasets/surajjha101/top-youtube-channels-data
+Taken from Kaggle, created by user Suraj Jha, downloaded 14 October 2022, last updated August 2022
 
 
-Data sources: Title, Agency, Location, Link
-netflix_titles.csv, amazon_prime_titles.csv, disney_plus_titles.csv, hulu_titles.csv
+<h>Description of data</h1>
 
 
-Netflix Movies and TV Shows, Amazon Prime Movies and TV Shows taken from Kaggle user SHIVAM BANSAL, downloaded 
-15 October 2022, updated 2021
 
-
-Description of data
-A list of Netflix movies and tv shows as of 2021.
-
-
-Why you are interested in this topic
+<h>Why you are interested in this topic </h1>
 Looking at viewing patterns of family (G/E rated) media from top streaming apps (Netflix, Hulu,)
 
 Thoughts on how you would hope to use this data
