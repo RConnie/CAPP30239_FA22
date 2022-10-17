@@ -3,11 +3,12 @@
 <h2>Data sources: </h2>
 Netflix Movies and TV Shows (netflix_titles.csv)
 https://www.kaggle.com/datasets/shivamb/netflix-shows
-Taken from Kaggle, created by user Shivam Bansal, downloaded 14 October 2022, last updated in 2021 
+Taken from Kaggle, created by user Shivam Bansal, downloaded 14 October 2022, last updated in 2021
 
-<p>Amazon Prime Movies and TV Shows (amazon_prime_titles.csv)
+
+Amazon Prime Movies and TV Shows (amazon_prime_titles.csv)
 https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows
-Taken from Kaggle, created by user Shivam Bansal, downloaded 14 October 2022, last updated in 2021 </p>
+Taken from Kaggle, created by user Shivam Bansal, downloaded 14 October 2022, last updated in 2021
 
 
 Disney Plus Movies and TV Shows (disney_plus_titles.csv)
