@@ -7,7 +7,7 @@ d3.csv("covid.csv").then(data => {
     
     for (let d of data) {
         d.cases = +d.cases
-    }
+    };
     
     const  height = 400,
             width = 600,
@@ -55,7 +55,7 @@ d3.csv("covid.csv").then(data => {
         .attr("y", d => y(d.cases))
         .attr("height", d => y(0) - y(d.cases));
 
-    d.append('text')
+    bar.append('text')
         .text(d => d.cases)
         .attr('x', d => x(d.country) + (x.bandwidth()/2))
         .attr('y', d => y(d.cases) + 15)
