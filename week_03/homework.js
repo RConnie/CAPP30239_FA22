@@ -13,7 +13,7 @@ d3.csv("library_visits_jan22.csv").then(data => {
     let svg = d3.select("#chart")
                 .append("svg")
                 .attr("viewbox", [0, 0, width, height]);
-    //
+    //creates a scale based on data
     const x = d3.scaleBand()
                 .domain(data.map(d =>d.branch))
                 .range([margin.left, width - margin.right])
@@ -21,9 +21,9 @@ d3.csv("library_visits_jan22.csv").then(data => {
 
     const y = d3.scaleLinear()
                 .domain([0, d3.max(data, d => d.num)]).nice() 
-                //.nice will roll up past final #
+                //.nice will roll axis up past final #
                 .range([height - margin.bottom, margin.top]);
-
+    //creating x and y axis
     const xAxis = g => g
         .attr("transform", `translate(0, ${height - margin.bottom + 5})`)
         .call(d3.axisBottom(x));
@@ -37,13 +37,15 @@ d3.csv("library_visits_jan22.csv").then(data => {
 
     svg.append("g")
         .call(yAxis);
-
+    //creates a bar object
     let bar = svg.selectAll("bar")
         .append("g")
         .data(data)
         .join("g")
         .attr("class", "bar");
 
+    /*adding attributes to bar like color of bar and text 
+    to mimic CPL logo colors*/
     bar.append('rect')
         .attr("fill", "green")
         .attr("x", d => x(d.branch))
@@ -56,7 +58,7 @@ d3.csv("library_visits_jan22.csv").then(data => {
         .attr('x', d => x(d.branch) + (x.bandwidth()/2))
         .attr('y', d => y(d.num) + 15)
         .attr('text-anchor', 'middle')
-        .style('fill', '#000');
+        .style('fill', '#FFFFFF');
         
 
 }); 
