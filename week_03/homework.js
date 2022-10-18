@@ -13,7 +13,7 @@ d3.csv("library_visits_jan22.csv").then(data => {
     let svg = d3.select("#chart")
                 .append("svg")
                 .attr("viewbox", [0, 0, width, height]);
-    //creates a scale based on data
+    //creating x and y constants to a scale based on data
     const x = d3.scaleBand()
                 .domain(data.map(d =>d.branch))
                 .range([margin.left, width - margin.right])
@@ -37,7 +37,7 @@ d3.csv("library_visits_jan22.csv").then(data => {
 
     svg.append("g")
         .call(yAxis);
-    //creates a bar object
+    //creating a bar object
     let bar = svg.selectAll("bar")
         .append("g")
         .data(data)

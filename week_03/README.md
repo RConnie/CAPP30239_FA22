@@ -51,4 +51,4 @@ All of my current datasets will be used as a primary source.  I am still on the 
 I want to use secondary data to do pandemic specific analysis.  
 
 <h1>Week 3 Homework</h1>
-To be completed shortly
+2nd and final draft completed with comments.
