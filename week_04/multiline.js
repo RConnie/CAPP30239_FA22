@@ -43,6 +43,7 @@ d3.csv("long-term-interest-G7.csv").then(data => {
 
     let g = svg.append("g")
       .attr("class", "country")
+      //mouseover is interactive element will swap a class color from blue to grey
       .on('mouseover', function () {
         d3.selectAll(".highlight").classed("highlight", false);
         d3.select(this).classed("highlight", true);

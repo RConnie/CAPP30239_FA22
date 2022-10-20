@@ -64,7 +64,7 @@ d3.csv('long-term-interest-monthly.csv').then(data => {
         .x(d => x(d.Date))
         .y(d => y(d.Value));
     
-    svg.append("patch")
+    svg.append("path")
         .datum(data)
         .attr("d", line)
         .attr("fill", "none")
