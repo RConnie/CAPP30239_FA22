@@ -19,7 +19,8 @@ d3.csv("covid.csv").then(data => {
           width = 800,
           margin = ({ top: 25, right: 30, bottom: 35, left: 50 });
 
-    let svg = d3.select("#horizontal-chart")
+    let svg = d3.select("#horizontal-chart") /* .append something on to 
+    that variable */
         .append("svg")
         .attr("viewBox", [0, 0, width, height]); // for resizing element in browser
 
@@ -63,5 +64,12 @@ d3.csv("covid.csv").then(data => {
         .attr('text-anchor', 'end')
         .attr('dominant-baseline', 'middle') //property of position
         .style('fill', 'white');
+
+    svg.append("text")
+        .attr("class", "x-label")
+        .attr("text-anchor", "end")
+        .attr("x", width - margin.right)
+        .attr("y", height + 8)
+        .text("Country Code");
 
 });
