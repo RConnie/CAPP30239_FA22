@@ -17,7 +17,6 @@ d3.csv('long-term-interest-canada.csv').then(data => {
         d.Num = +d.Num;
         d.Month = timeParse(d.Month);
     }
-    //console.log(data);
 
     let x = d3.scaleTime()
     // extent start lowest value in data
@@ -39,7 +38,7 @@ d3.csv('long-term-interest-canada.csv').then(data => {
       .call(d3.axisLeft(y)
       .tickSizeOuter(0)
       .tickFormat(d => d + "%")
-      //.tickeSize(-width)
+      .tickeSize(-width)
       );
 
     svg.append("text")
