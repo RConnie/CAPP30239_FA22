@@ -69,6 +69,7 @@ d3.csv('long-term-interest-canada.csv').then(data => {
         .y(d => y(d.Num))
         .curve(d3.curveNatural);
     
+    //change fill color to a lighter shade of purple
     svg.append("path")
         .datum(data)
         .attr("d", line)
