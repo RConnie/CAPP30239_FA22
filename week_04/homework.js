@@ -25,7 +25,7 @@ d3.csv('long-term-interest-canada.csv').then(data => {
 
     let y = d3.scaleLinear()
     //start y on 0 and give it array from data, the max point of data
-        .domain([0, d3.max(data, d => d.Num)])
+        .domain([0, d3.max(data, d => d.Num)]).nice()
         //the vertical space
         .range([height - margin.bottom, margin.top]);
     
@@ -37,14 +37,15 @@ d3.csv('long-term-interest-canada.csv').then(data => {
       .attr("transform", `translate(${margin.left},0)`)
       .call(d3.axisLeft(y)
       .tickSizeOuter(0)
-      .tickFormat(d => d + "%")
-      .tickeSize(-width)
-      );
+      .tickFormat(d => d + "%"));
+      
 
     svg.append("text")
       .attr("class", "x-label")
       .attr("text-anchor", "end")
       .attr("x", width - margin.right)
+      //change text color in order to read it better
+      .attr("fill", "steelblue")
       .attr("y", height)
       .attr("dx", "0.5em")
       .attr("dy", "-0.5em") 
@@ -53,15 +54,18 @@ d3.csv('long-term-interest-canada.csv').then(data => {
     svg.append("text")
       .attr("class", "y-label")
       .attr("text-anchor", "end")
-      .attr("x", -margin.top/2)
+      .attr("x", -margin.top)
       .attr("dx", "-0.5em")
-      .attr("y", 10)
+      .attr("y", 8)
+      //change text color in order to read it better
+      .attr("fill", "steelblue")
       .attr("transform", "rotate(-90)")
       .text("Interest rate");
 
-      let line = d3.line()
+    let line = d3.line()
         .x(d => x(d.Month))
-        .y(d => y(d.Num));
+        .y(d => y(d.Num))
+        .curve(d3.curveNatural);
     
     svg.append("path")
         .datum(data)
