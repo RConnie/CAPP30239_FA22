@@ -74,6 +74,6 @@ d3.csv('long-term-interest-canada.csv').then(data => {
         .datum(data)
         .attr("d", line)
         .attr("fill", "none")
-        .attr("fill", "#9979af");
+        .attr("stroke", "#9979af");
 
   });
