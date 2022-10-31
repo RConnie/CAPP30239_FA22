@@ -4,7 +4,7 @@ This repo is being used for a Univeristy of Chiacgo's Data Visualization course 
 
 Lastest update: 
 
-Cleaned initial datasets into smaller datasets, which can be found <a href="https://rconnie.github.io/CAPP30239_FA22/tree/main/data.html">here</a>
+Cleaned initial datasets into smaller datasets, which can be found <a href="https://github.com/RConnie/CAPP30239_FA22/tree/main/data">here</a> 
 
 
 Quick Links: 
