@@ -1,5 +1,5 @@
-,Platform,Number of Kid Media,Number of Adult Media,Kids Percentage of Total Media
-0,Netflix,2548,6742,0.2742734122712594
-1,Disney +,1368,148,0.9023746701846965
-2,Hulu,832,1592,0.3432343234323432
-3,Amazon,2764,6968,0.28401150842581174
+,Platform,Number of Kid Media,Number of Adult Media,Total Media,Kids Percentage of Total Media
+0,Netflix,2548,6742,9290,0.2742734122712594
+1,Disney +,1368,148,1516,0.9023746701846965
+2,Hulu,832,1592,2424,0.3432343234323432
+3,Amazon,2764,6968,9732,0.28401150842581174
