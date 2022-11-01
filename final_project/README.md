@@ -1,6 +1,6 @@
-<center><h1>3-min Story</h1></center>
+<h2>Alpha Gen Media Project Overview</h2> 
 
-<h2>Alpha Gen Media</h2> 
+
 
 <p>Families everywhere are turning to streaming platforms for their entertainment.  Generation Alpha (born 2010 -present) will spend their entire childhood consuming on demand programming, and will have access to more media than any other generation before them.  With so many choices and only internet speed as a limitation, what media are families devouring?</p>
 
