@@ -6,6 +6,8 @@ Lastest update:
 
 Cleaned initial datasets into smaller datasets, which can be found <a href="https://github.com/RConnie/CAPP30239_FA22/tree/main/data">here</a> 
 
+Created a <a href="https://github.com/RConnie/CAPP30239_FA22/tree/main/final_project">final_project</a> folder that contains the 3-min story and drafts of potential charts.
+
 
 Quick Links: 
 

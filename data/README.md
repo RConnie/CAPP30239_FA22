@@ -8,5 +8,4 @@ Things left to do:
 
 1. Add information about supplemental datasets (netflix_imdb_ratings.csv, disney_imdb_ratings.csv) into README.md file for week_03
 2. Clean supplemental datasets into mini datasets and place in root data folder
-3. Upload 3 min story into root README file 
-4. Upload hand sketches of initil charts for final project
+
