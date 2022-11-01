@@ -1,4 +1,4 @@
-<h1>3-min Story</h1>
+<center><h1>3-min Story</h1></center>
 
 <h2>Alpha Gen Media</h2> 
 
