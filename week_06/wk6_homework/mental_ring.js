@@ -35,7 +35,7 @@ d3.json('race_ill.json').then((data) => {
       .attr("d", arc);
   
     svg.append("g")
-      .attr("font-size", 10)
+      .attr("font-size", 12)
       .attr("text-anchor", "middle")
       .selectAll("text")
       .data(arcs)
@@ -57,5 +57,5 @@ d3.json('race_ill.json').then((data) => {
       .attr("text-anchor", "middle")
       .attr("alignment-baseline", "middle")
       .text(year)
-      .style("font-size", 20);
+      .style("font-size", 17);
   }

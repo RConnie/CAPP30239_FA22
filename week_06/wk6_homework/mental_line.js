@@ -7,18 +7,24 @@ const svg = d3.select("#line-chart")
   .append("svg")
   .attr("viewBox", [0, 0, width, height]);
 
-d3.csv("location_num.csv").then(data => {
-  let timeParse = d3.timeParse("%Y-%m");
+d3.csv("location_num2.csv").then(data => {
+  let timeParse = d3.timeParse("%Y-%m-%d"); //will transform into timestamp
+  //pd.df 2015-01-02 timeParse()
+  
+  console.log(new Date('2015-01-02'))
+  console.log(timeParse('2015-01-02'))
 
   let states = new Set();
-
+  //Date 2010-01-12
   for (let d of data) {
-    d.Month = timeParse(d.Month);
+    d.Month = new Date(d.Month)
+    //d.Month = timeParse(d.Month);//use d3 function to extract month
+    //d.Month = +d.Month;
     d.Num_of_deaths = +d.Num_of_deaths;
     states.add(d.State);
   }
 
-  let x = d3.scaleTime()
+  let x = d3.scaleTime()//timestamp format
     .domain(d3.extent(data, d => d.Month))
     .range([margin.left, width - margin.right]);
 
@@ -32,7 +38,7 @@ d3.csv("location_num.csv").then(data => {
 
   svg.append("g")
     .attr("transform", `translate(${margin.left},0)`)
-    .call(d3.axisLeft(y).tickSize(-innerWidth).tickFormat(d => d + "%"));
+    .call(d3.axisLeft(y).tickSize(-innerWidth).tickFormat(d => d + " "));
 
   let line = d3.line()
     .x(d => x(d.Month))
