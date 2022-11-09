@@ -1,0 +1,93 @@
+[
+    {
+      "year": "White",
+      "values": [
+        {
+          "category": "Had a Mental Illness",
+          "amount": 186
+        },
+        {
+          "category": "No Known Mental Illness",
+          "amount": 751
+        }
+      ]
+    },
+    {
+      "year": "Black",
+      "values": [
+        {
+          "category": "Had a Mental Illness",
+          "amount": 52
+        },
+        {
+          "category": "No Known Mental Illness",
+          "amount": 378
+        }
+      ]
+    },
+    {
+      "year": "Hispanic",
+      "values": [
+        {
+          "category": "Had a Mental Illness",
+          "amount": 48
+        },
+        {
+          "category": "No Known Mental Illness",
+          "amount": 246
+        }
+      ]
+    },
+    {
+      "year": "Asian",
+      "values": [
+        {
+          "category": "Had a Mental Illness",
+          "amount": 4
+        },
+        {
+          "category": "No Known Mental Illness",
+          "amount": 19
+        }
+      ]
+    },
+    {
+      "year": "Native",
+      "values": [
+        {
+          "category": "Had a Mental Illness",
+          "amount": 4
+        },
+        {
+          "category": "No Known Mental Illness",
+          "amount": 19
+        }
+      ]
+    },
+    {
+      "year": "Other",
+      "values": [
+        {
+          "category": "Had a Mental Illness",
+          "amount": 1
+        },
+        {
+          "category": "No Known Mental Illness",
+          "amount": 10
+        }
+      ]
+    },
+    {
+        "year": "Unknown",
+        "values": [
+          {
+            "category": "Had a Mental Illness",
+            "amount": 32
+          },
+          {
+            "category": "No Known Mental Illness",
+            "amount": 114
+          }
+        ]
+      }
+  ]

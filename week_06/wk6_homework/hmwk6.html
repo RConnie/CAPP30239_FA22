@@ -44,14 +44,31 @@
 </head>
 <body>
         <div id="horizontal-chart" class="flex-item">
-            <h2>PMental Illness Deaths by State</h2>
+            <h2>Mental Illness Deaths by State</h2>
             <p>
                 Comparing mental illness percentage of deaths by police.
             </p>
         </div>
     </div>
+
+    <div class="container">
+        <h1>Mental Illness Deaths by Race</h1>
+        <p>Number of mentally ill people killed by police by race.
+        </p>
+        <div id="chart" class="ring"></div>
+    </div>
+
+    <div id="container">
+        <h1></h1>
+        <p>
+            Number of mentally ill inidividuals deaths by the top 3 states
+            of police invovled deaths.
+        </p>
+        <div id="line-chart"></div>
+    </div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-   
     <script src="mental_bar.js"></script>
+    <script src="mental_ring.js"></script>
+    <script src="mental_line.js"></script>
 </body>
 </html>
