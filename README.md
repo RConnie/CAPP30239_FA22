@@ -19,7 +19,7 @@ Quick Links:
 
 <a href="https://github.com/RConnie/CAPP30239_FA22/tree/main/week_05">Week_05</a>
 
-<a href="https://github.com/RConnie/CAPP30239_FA22/tree/main/week_06">Week_65</a>
+<a href="https://github.com/RConnie/CAPP30239_FA22/tree/main/week_06">Week_06</a>
 
 <a href="https://github.com/RConnie/CAPP30239_FA22/tree/main/week_07">Week_07</a>
 
