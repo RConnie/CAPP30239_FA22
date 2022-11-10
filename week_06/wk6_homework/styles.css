@@ -4,6 +4,7 @@ svg {
     height: 100vh; 
 }
 * { font-family: Arial, Helvetica, sans-serif; }
+
 .flex-container, .ring {
     display: flex;
     flex-wrap: nowrap;
@@ -12,7 +13,7 @@ svg {
     align-content: flex-start;
     width: 100%;
     max-width: 1040px;
-    height: 80vh;
+    height: 25vh;
     overflow: auto;
     flex-direction: row;
     margin: 0 auto;
@@ -72,16 +73,13 @@ text { font-size: 16px; }
     }
 
     .highlight path {
-      stroke: steelblue;
+      stroke: #ccc;
       opacity: 1;
     }
 
     .highlight text { 
-      fill: steelblue; 
+      fill: #ccc; 
     }
-    * {
-        font-family: Arial, Helvetica, sans-serif;
-      }
   
       #container {
         max-width: 1040px;

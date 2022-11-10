@@ -52,7 +52,7 @@ d3.json('race_ill.json').then((data) => {
       .text(d => d);
   
     svg.append("text")
-      .attr("font-size", 16)
+      .attr("font-size", 14)
       .attr("font-weight", "bold")
       .attr("text-anchor", "middle")
       .attr("alignment-baseline", "middle")

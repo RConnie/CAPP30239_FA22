@@ -4,36 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Police Shootings Involving Mental Illness</title>
+    <title>Mental Illness and Deadly Police Encounters</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="container">
+        <h1>Mental Illness and Deadly Police Encounters</h1>
+        <p> The following analysis uses police shooting data that looks at the number of 
+        individuals harmed by police who had a known mental illness.  This analysis 
+        hopes to further the discussion around mental illness and safety, particularly 
+        to expand the narrative that mentally ill individuals have an increased risk of 
+        being harmed by police.</p>
+    </div>
+        <div class="container">
             <h2>Mental Illness Deaths by State</h2>
             <p>
-                Comparing mental illness percentage of deaths by police.
+            This chart examines each state that reported police shootings in 2015 and looked 
+            at what percentage of those incidents involved a mentally ill person.  This bar 
+            chart is skewed, as it does not give the entire picture of impact.  Percentages 
+            could be high due to the fact that there were not many total shootings (ex: ME only 
+            had 4 incidents total, 2 of which were with mentally ill individuals).  With an estimate 
+            \of nearly 20% of Americans having a mental illness, this chart still shows an impact that 
+            disabled individuals may not receive the support they need if they are disproportionately 
+            involved in police encounters.
             </p>
             <div id="horizontal-chart"></div>
     </div>
 
     <div class="container">
-        <h1>Mental Illness Deaths by Race</h1>
+        <h2>Mental Illness Deaths by Race</h2>
         <p>
-            Number of mentally ill people killed by police by race.
+            This series of ring charts examines the racial breakdown of police shootings and what 
+            percentage within each race was mentally ill.
         </p>
         <div id="chart" class="ring"></div>
     </div>
 
     <div id="container">
-        <h1>Top 3 States</h1>
+        <h2>Comparing Mental Illness Deaths by State</h2>
         <p>
             Number of mentally ill inidividuals deaths by the top 3 states
             of police invovled deaths.
         </p>
         <div id="line-chart"></div>
     </div>
-    
+    <p> All charts were created using 2015 data of police shootings was taken from the
+    <a href="https://www.washingtonpost.com/graphics/investigations/police-shootings-database/">Washington Post Police Shootings Database</a>
+    </p>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="mental_bar.js"></script>
     <script src="mental_ring.js"></script>

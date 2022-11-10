@@ -10,7 +10,7 @@ d3.csv("state_ill_percent.csv").then(data => {
     //sorts from biggest to smallest #, takes a and compares to b
     data.sort((a, b) => b.Mental_Percent - a.Mental_Percent);
 
-    // another sort, country name
+    // another sort, state name
     data.sort((a, b) => d3.ascending(a.State, b.State));
 
     /* blue = variable, red  w/ string = attribute, 
@@ -37,7 +37,8 @@ d3.csv("state_ill_percent.csv").then(data => {
     // g is a part of html bc in "", group element
     svg.append("g")
         .attr("transform", `translate(0,${height - margin.bottom + 5})`) // move location of axis
-        .call(d3.axisBottom(x));
+        .call(d3.axisBottom(x).tickSize(-innerWidth).tickFormat(d => d + "%"));
+
 
     //attribute goes on the page
     svg.append("g")
@@ -51,7 +52,7 @@ d3.csv("state_ill_percent.csv").then(data => {
         .attr("class", "bar");
 
     bar.append("rect") // add rect to bar group
-        .attr("fill", "steelblue")
+        .attr("fill", "#0A9ACB")
         .attr("x", margin.left)
         .attr("width", d => x(d.Mental_Percent))
         .attr("y", d => y(d.State))
