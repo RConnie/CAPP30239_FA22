@@ -4,7 +4,7 @@ This repo is being used for a Univeristy of Chiacgo's Data Visualization course 
 
 Lastest update: 
 
-Finished 3 Chart Assignment found in <a href="https://github.com/RConnie/CAPP30239_FA22/tree/main/week_06/wk6_homework/hmwk6.html">week_06</a> 
+Finished 3 Chart Assignment found in <a href="https://github.com/RConnie/CAPP30239_FA22/tree/main/week_06/">week_06</a> 
 
 
 Quick Links: 
