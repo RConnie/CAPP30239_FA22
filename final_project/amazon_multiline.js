@@ -4,25 +4,26 @@ let height = 500,
     margin = ({ top: 25, right: 30, bottom: 35, left: 30 })
     innerWidth = width - margin.left - margin.right;
 
-const svg = d3.select("#line-chart")
+const svg = d3.select("#line-chart1")
   .append("svg")
   .attr("viewBox", [0, 0, width, height]);
 
 d3.csv("amazon_genres.csv").then(data => {
-  //let timeParse = d3.timeParse("%Y-%m-%d");
+  
 
   let countries = new Set();
 
   for (let d of data) {
-    //d.Genre = timeParse(d.Genre);
-    d.Genre = +d.Genre;
     d.Value = +d.Value;
     countries.add(d.Location);
   }
 
-  let x = d3.scaleTime()
-    .domain(d3.extent(data, d => d.Genre))
+  //let x = d3.scaleLinear()
+  let x = d3.scaleBand()
+    .domain(data.map(d =>d.Genre))
+    //.domain(d3.extent(data, d => d.Genre))
     .range([margin.left, width - margin.right]);
+    
 
   let y = d3.scaleLinear()
     .domain(d3.extent(data, d => d.Value))
