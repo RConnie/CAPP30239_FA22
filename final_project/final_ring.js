@@ -1,15 +1,15 @@
-d3.json('budget-all.json').then((data) => {
+d3.json('final_ring.json').then((data) => {
     for (let d of data) {
       createRing(d);
     }
   });
   
-  function createRing({ year, values }) {
+  function createRing({ platform, values }) {
     const height = 250,
       width = 300,
       innerRadius = 40,
       outerRadius = 65,
-      labelRadius = 85;
+      labelRadius = 90;
   
     const arcs = d3.pie().value(d => d.amount)(values);
   
@@ -31,7 +31,9 @@ d3.json('budget-all.json').then((data) => {
       .selectAll("path")
       .data(arcs)
       .join("path")
-      .attr("fill", (d, i) => d3.schemeCategory10[i])
+      //.attr("fill", (d, i) => d3.schemeCategory10[i])
+      .attr("fill", (d, i) => d3.schemeSet1[i])
+      //.attr("fill", (d, i) => d3.schemeSet2[i])
       .attr("d", arc);
   
     svg.append("g")
@@ -56,6 +58,6 @@ d3.json('budget-all.json').then((data) => {
       .attr("font-weight", "bold")
       .attr("text-anchor", "middle")
       .attr("alignment-baseline", "middle")
-      .text(year)
-      .style("font-size", 20);
+      .text(platform)
+      .style("font-size", 19);
   }

@@ -1,103 +1,53 @@
 [
     {
-      "year": "2022",
+      "platform": "Netflix",
       "values": [
         {
-          "category": "Food",
-          "amount": 717
+          "category": "Family Media",
+          "amount": 2548
         },
         {
-          "category": "Home",
-          "amount": 2464
-        },
-        {
-          "category": "Entertainment",
-          "amount": 377
+          "category": "Adult Media",
+          "amount": 6742
         }
       ]
     },
     {
-      "year": "2021",
+      "platform": "Disney +",
       "values": [
         {
-          "category": "Food",
-          "amount": 580
+          "category": "Family Media",
+          "amount": 1368
         },
         {
-          "category": "Home",
-          "amount": 1928
-        },
-        {
-          "category": "Entertainment",
-          "amount": 532
+          "category": "Adult Media",
+          "amount": 148
         }
       ]
     },
     {
-      "year": "2020",
+      "platform": "Hulu",
       "values": [
         {
-          "category": "Food",
-          "amount": 957
+          "category": "Family Media",
+          "amount": 832
         },
         {
-          "category": "Home",
-          "amount": 1861
-        },
-        {
-          "category": "Entertainment",
-          "amount": 532
+          "category": "Adult Media",
+          "amount": 1592
         }
       ]
     },
     {
-      "year": "2019",
+      "platform": "Amazon",
       "values": [
         {
-          "category": "Food",
-          "amount": 904
+          "category": "Family Media",
+          "amount": 2764
         },
         {
-          "category": "Home",
-          "amount": 2094
-        },
-        {
-          "category": "Entertainment",
-          "amount": 630
-        }
-      ]
-    },
-    {
-      "year": "2018",
-      "values": [
-        {
-          "category": "Food",
-          "amount": 1203
-        },
-        {
-          "category": "Home",
-          "amount": 1813
-        },
-        {
-          "category": "Entertainment",
-          "amount": 653
-        }
-      ]
-    },
-    {
-      "year": "2017",
-      "values": [
-        {
-          "category": "Food",
-          "amount": 1128
-        },
-        {
-          "category": "Home",
-          "amount": 1986
-        },
-        {
-          "category": "Entertainment",
-          "amount": 314
+          "category": "Adult Media",
+          "amount": 6968
         }
       ]
     }
