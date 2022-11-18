@@ -9,7 +9,6 @@ const svg = d3.select("#line-chart1")
   .attr("viewBox", [0, 0, width, height]);
 
 d3.csv("amazon_genres.csv").then(data => {
-  
 
   let countries = new Set();
 
@@ -18,12 +17,16 @@ d3.csv("amazon_genres.csv").then(data => {
     countries.add(d.Location);
   }
 
-  //let x = d3.scaleLinear()
+  // // //let x = d3.scaleLinear()
+  // let x = d3.scaleBand()
+  // //let x = d3.scalePoint()
+  //   .domain(data.map(d =>d.Genre))
+  //   .range([margin.left, width - margin.right]);
+    
   let x = d3.scaleBand()
     .domain(data.map(d =>d.Genre))
-    //.domain(d3.extent(data, d => d.Genre))
-    .range([margin.left, width - margin.right]);
-    
+    .range([0, 800])
+    .padding([0.8]);
 
   let y = d3.scaleLinear()
     .domain(d3.extent(data, d => d.Value))
@@ -67,7 +70,7 @@ d3.csv("amazon_genres.csv").then(data => {
 
     g.append("text")
       .text(country)
-      .attr("x", x(lastEntry.Genre) + 3)
+      .attr("x", x(lastEntry.Genre) + 20)
       .attr("y", y(lastEntry.Value))
       .attr("dominant-baseline", "middle")
       .attr("fill", "#095778");

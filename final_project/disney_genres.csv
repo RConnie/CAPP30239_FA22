@@ -1,0 +1,28 @@
+,Genre,Value,Location
+0,Comedy,29,Canada
+1,Drama,13,Canada
+2,Science Fiction/Fantasy,34,Canada
+3,Action/Adventure,31,Canada
+4,Suspense/Horror,0,Canada
+5,Documentary,4,Canada
+6,Romance,1,Canada
+7,International,0,Canada
+8,Animation,24,Canada
+0,Comedy,27,UK
+1,Drama,9,UK
+2,Science Fiction/Fantasy,25,UK
+3,Action/Adventure,47,UK
+4,Suspense/Horror,0,UK
+5,Documentary,24,UK
+6,Romance,1,UK
+7,International,0,UK
+8,Animation,36,UK
+0,Comedy,481,USA
+1,Drama,116,USA
+2,Science Fiction/Fantasy,242,USA
+3,Action/Adventure,391,USA
+4,Suspense/Horror,0,USA
+5,Documentary,150,USA
+6,Romance,21,USA
+7,International,0,USA
+8,Animation,586,USA

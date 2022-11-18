@@ -46,13 +46,13 @@
   }
 
   svg text {
-    font-size: 12px;
+    font-size: 6px;
   }
   
   .ring svg text {
     font-size: 9px;
   }
-  
+
   .x-axis text {
     transform: translateY(5px);
   }
@@ -64,5 +64,32 @@
   foreignObject p {
     font-size: 10px;
   }
+  a { color: #369;}
+
+  text {
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  path.domain { display: none; }
+
+  line {
+    stroke: #eee;
+    stroke-dasharray: 1px;
+  }
+
+  .country { cursor: default; }
+  
+  .country path {
+    stroke-width: 1.5;
+    opacity: 0.75;
+  }
+
+  .highlight path {
+    stroke: steelblue;
+    opacity: 1;
+  }
+
+  .highlight text { fill: steelblue; }
 
  

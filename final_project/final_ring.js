@@ -7,9 +7,9 @@ d3.json('final_ring.json').then((data) => {
   function createRing({ platform, values }) {
     const height = 250,
       width = 300,
-      innerRadius = 40,
+      innerRadius = 45,
       outerRadius = 65,
-      labelRadius = 90;
+      labelRadius = 95;
   
     const arcs = d3.pie().value(d => d.amount)(values);
   
