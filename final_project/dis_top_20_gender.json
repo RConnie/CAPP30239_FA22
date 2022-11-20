@@ -1,0 +1,122 @@
+[
+    {
+      "show": "The Simpsons",
+      "sex": "Mix",
+      "genre": "Comedy",
+      "average": "White"
+    },
+    {
+      "show": "Mickey Mouse Clubhouse",
+      "sex": "Animal",
+      "genre": "Animation",
+      "average": "No Race"
+    },
+    {
+      "show": "Jessie",
+      "sex": "Female",
+      "genre": "Comedy",
+      "average": "White"
+    },
+    {
+      "show": "Star Wars: Clone Wars",
+      "sex": "Male",
+      "genre": "Animation",
+      "average": 34.5
+    },
+    {
+      "show": "Phineas + Ferb",
+      "sex": "Male",
+      "genre": "Animation",
+      "average": "White"
+    },
+    {
+      "show": "Puppy Dog Pals",
+      "sex": "Animal",
+      "genre": "Animation",
+      "average": 47
+    },
+    {
+      "show": "Star Wars: Rebels",
+      "sex": 36,
+      "genre": "Animation",
+      "average": 33
+    },
+    {
+      "show": "Wonderful World of Mickey Mouse",
+      "sex": "Animal",
+      "genre": 27,
+      "average": 33
+    },
+    {
+      "show": "Hannah Montana",
+      "sex": "Female",
+      "genre": "Comedy",
+      "average": "White"
+    },
+    {
+      "show": "A.N.T. Farm",
+      "sex": 31,
+      "genre": "Comedy",
+      "average": 26.5
+    },
+    {
+      "show": "Oye Golu",
+      "sex": "Male",
+      "genre": "Animation",
+      "average": "Brown"
+    },
+    {
+      "show": "Good Luck Charlie",
+      "sex": 23,
+      "genre": "Comedy",
+      "average": "White"
+    },
+    {
+      "show": "Disney Animal Kingdom",
+      "sex": "Animal",
+      "genre": "Documentary",
+      "average": 36
+    },
+    {
+      "show": "Making of: Frozen 2",
+      "sex": 63,
+      "genre": "Documentary",
+      "average": 50
+    },
+    {
+      "show": "Mickey Mouse",
+      "sex": "Animal",
+      "genre": "Animation",
+      "average": 45
+    },
+    {
+      "show": "On Pointe",
+      "sex": 70,
+      "genre": 36,
+      "average": 53
+    },
+    {
+      "show": "Doc McStuffins",
+      "sex": "Female",
+      "genre": "Animation",
+      "average": "Black"
+    },
+    {
+      "show": "Bluey",
+      "sex": "Female",
+      "genre": "Animation",
+      "average": "No Race"
+    },
+    {
+      "show": "Muppets Now",
+      "sex": "Other",
+      "genre": "Other",
+      "average": "40"
+    },
+    {
+      "show": "Imagineering",
+      "sex": 63,
+      "genre": "Documentary",
+      "average": 48.5
+    }
+  ]

@@ -1,29 +1,20 @@
 // Histogram & Joins
 
-// const height = 400,
-//     width = 600,
-//     margin = ({ top: 25, right: 10, bottom: 50, left: 10 }),
-//     padding = 1;
-
-// let svg = d3.select("#bar-chart")
-//     .append("svg")
-//     .attr("viewBox", [0, 0, width, height]);
-
-Promise.all([
-    //d3.json('dis_top_20_race.json'),
-   //d3.json('dis_top_20_gender.json'),
-    d3.json('dis_top_20_genre.json')]).then((data) => {      
-    
-    console.log(data)
-
-    const height = 400,
+const height = 400,
     width = 600,
     margin = ({ top: 25, right: 10, bottom: 50, left: 10 }),
     padding = 1;
 
-    let svg = d3.select("#bar-chart")
-        .append("svg")
-        .attr("viewBox", [0, 0, width, height]);
+const svg = d3.select("#chart")
+    .append("svg")
+    .attr("viewBox", [0, 0, width, height]);
+
+Promise.all([
+    //d3.json('dis_top_20_gender.json'),
+    d3.json('dis_top_20_genre.json')
+    //d3.json('dis_top_20_race.json')
+]).then((data) => {      
+    console.log(data)
 
     const x = d3.scaleLinear()
       .range([margin.left, width - margin.right])
