@@ -1,0 +1,37 @@
+,Genre,Value,Location
+0,Comedy,32,Amazon
+1,Drama,30,Amazon
+2,Science Fiction/Fantasy,11,Amazon
+3,Action/Adventure,33,Amazon
+4,Suspense/Horror,16,Amazon
+5,Documentary,7,Amazon
+6,Romance,3,Amazon
+7,International,10,Amazon
+8,Animation,4,Amazon
+0,Comedy,481,Disney
+1,Drama,116,Disney
+2,Science Fiction/Fantasy,242,Disney
+3,Action/Adventure,391,Disney
+4,Suspense/Horror,0,Disney
+5,Documentary,150,Disney
+6,Romance,21,Disney
+7,International,0,Disney
+8,Animation,586,Disney
+0,Comedy,117,Hulu
+1,Drama,54,Hulu
+2,Science Fiction/Fantasy,20,Hulu
+3,Action/Adventure,60,Hulu
+4,Suspense/Horror,12,Hulu
+5,Documentary,42,Hulu
+6,Romance,16,Hulu
+7,International,3,Hulu
+8,Animation,32,Hulu
+0,Comedy,11,Netflix
+1,Drama,283,Netflix
+2,Science Fiction/Fantasy,148,Netflix
+3,Action/Adventure,196,Netflix
+4,Suspense/Horror,44,Netflix
+5,Documentary,205,Netflix
+6,Romance,122,Netflix
+7,International,55,Netflix
+8,Animation,10,Netflix

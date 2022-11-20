@@ -8,7 +8,7 @@ const svg = d3.select("#line-chart1")
   .append("svg")
   .attr("viewBox", [0, 0, width, height]);
 
-d3.csv("amazon_genres.csv").then(data => {
+d3.csv("USA_genres_2.csv").then(data => {
 
   let countries = new Set();
 

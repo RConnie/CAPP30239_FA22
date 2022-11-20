@@ -21,37 +21,29 @@
 
   <body>
     <div class="container">
-      <h1>Amazon Top Family Genres by Country</h1>
-      <p>Family media broken down by genre and country.
+      <h1>USA Top Family Genres by Platform</h1>
+      <p>Family media broken down by genre and streaming platform.
       </p>
       <div id="line-chart1"></div>
     </div>
 
-    <body>
-        <div class="container">
-          <h1>Disney Top Family Genres by Country</h1>
-          <p>Family media broken down by genre and country.
-          </p>
-          <div id="line-chart2"></div>
-        </div>
-    
-    <body>
-        <div class="container">
-            <h1>Hulu Top Family Genres by Country</h1>
-            <p>Family media broken down by genre and country.
-            </p>
-            <div id="line-chart3"></div>
-        </div>
 
-    <body>
-        <div class="container">
-            <h1>Netflix Top Family Genres by Country</h1>
-            <p>Family media broken down by genre and country.
-            </p>
-            <div id="line-chart4"></div>
-        </div>
 
-            
+      <div class="container">
+            <h1>Disney Top Shows of 2020</h1>
+            <p>Top Disney + shows streamed in 2020 broken down by gender and race
+              of lead character.
+            </p>
+            <label>
+              Lead Character: 
+              <select>
+                <option value="0">Race</option>
+                <option value="1">Sex</option>
+              </select>
+           </label>
+            <div id="bar-chart"></div>
+      </div>
+          
 
   <p> Charts were created using data from Kaggle
     <a href="">Kaggle Datasets</a>
@@ -59,6 +51,6 @@
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="final_ring.js"></script>
   <script src="amazon_multiline.js"></script>
-  <script src="disney_multiline.js"></script>
+  <script src="final_histogram.js"></script>
 
 </html>
