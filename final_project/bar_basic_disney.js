@@ -102,7 +102,7 @@ d3.csv("Disney_Race.csv").then(data => {
     // g is a part of html bc in "", group element
     svg.append("g")
         .attr("transform", `translate(0,${height - margin.bottom + 5})`) // move location of axis
-        .call(d3.axisBottom(x).tickSize(-innerWidth).tickFormat(d => d + "%"));
+        .call(d3.axisBottom(x).tickSize(-innerWidth).tickFormat(d => d + ""));
 
 
     //attribute goes on the page
