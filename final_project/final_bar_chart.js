@@ -2,6 +2,12 @@
 // Released under the ISC license.
 // https://observablehq.com/@d3/grouped-bar-chart
 
+d3.json('USA_genres_2.json').then((data) => {
+  
+  GroupedBarChart(data, );
+  }
+);
+
 function GroupedBarChart(data, {
   x = (d, i) => i, // given d in data, returns the (ordinal) x-value
   y = d => d, // given d in data, returns the (quantitative) y-value

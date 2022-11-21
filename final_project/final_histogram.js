@@ -9,10 +9,7 @@
 //     .append("svg")
 //     .attr("viewBox", [0, 0, width, height]);
 
-Promise.all([
-    //d3.json('dis_top_20_race.json'),
-   //d3.json('dis_top_20_gender.json'),
-    d3.json('dis_top_20_genre.json')]).then((data) => {      
+d3.csv("Disney_20.csv").then(data =>  {      
     
     console.log(data)
 
@@ -43,7 +40,7 @@ Promise.all([
     function updateChart(i) {
         const bins = d3.bin()
             .thresholds(10)
-            .value(d => d.average)(data[i]);
+            .value(d => d.race)(data[i]);
 
         binGroups.selectAll("g")
         .data(bins, d => d.x0)

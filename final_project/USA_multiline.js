@@ -17,11 +17,6 @@ d3.csv("USA_genres_2.csv").then(data => {
     countries.add(d.Location);
   }
 
-  // // //let x = d3.scaleLinear()
-  // let x = d3.scaleBand()
-  // //let x = d3.scalePoint()
-  //   .domain(data.map(d =>d.Genre))
-  //   .range([margin.left, width - margin.right]);
     
   let x = d3.scaleBand()
     .domain(data.map(d =>d.Genre))
@@ -66,7 +61,7 @@ d3.csv("USA_genres_2.csv").then(data => {
       .attr("stroke", "#c6d4e5")
       .attr("d", line)
 
-    let lastEntry = countryData[countryData.length - 5]; //last piece of data to position text x and y
+    let lastEntry = countryData[countryData.length - 4]; //last piece of data to position text x and y
 
     g.append("text")
       .text(country)
