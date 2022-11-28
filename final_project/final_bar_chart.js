@@ -2,12 +2,45 @@
 // Released under the ISC license.
 // https://observablehq.com/@d3/grouped-bar-chart
 
-d3.json('USA_genres_2.json').then((data) => {
-  
-  GroupedBarChart(data, );
-  }
-);
+// let Genres = Locations.columns.slice(1);
+// let data = Genres.flatMap(Genre => Locations.map(d => ({Location: d.name, Genre, population: d[Genre]}))); // pivot longer
+// (3) IMPORT DATA (this data is from Observable example)
+d3.csv('USA_genres_2.csv').then(data => {
 
+  let ages = data.columns.slice(1);
+  let stateages = ages.flatMap(age => data.map(d => ({state: d.name, age, population: d[age]}))); // pivot longer
+
+  let chart1 = GroupedBarChart(stateages, {
+    x: d => d.state,
+    y: d => d.population / 1e6,
+    z: d => d.age,
+    xDomain: d3.groupSort(stateages, D => d3.sum(D, d => -d.population), d => d.state).slice(0, 6), // top 6
+    yLabel: "Number of media",
+    zDomain: ages,
+    colors: d3.schemeSpectral[ages.length],
+    width,
+    height: 500
+  });
+
+ 
+
+  // (5) APPEND TO 
+  document.getElementById("chart1").appendChild(chart1);
+});
+
+// Locations = FileAttachment("USA_genres.csv").csv({typed: true})
+
+// Genre = Locations.columns.slice(1)
+
+// LocationGenre = Genre.flatMap(Genre => Locations.map(d => ({Location: d.name, Genre, Value: d[Genre]}))) // pivot longer
+
+// Copyright 2021 Observable, Inc.
+// Released under the ISC license.
+// https://observablehq.com/@d3/grouped-bar-chart
+
+// Copyright 2021 Observable, Inc.
+// Released under the ISC license.
+// https://observablehq.com/@d3/grouped-bar-chart
 function GroupedBarChart(data, {
   x = (d, i) => i, // given d in data, returns the (ordinal) x-value
   y = d => d, // given d in data, returns the (quantitative) y-value
@@ -65,41 +98,41 @@ function GroupedBarChart(data, {
   }
 
   const svg = d3.create("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .attr("viewBox", [0, 0, width, height])
-      .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+    .attr("width", width)
+    .attr("height", height)
+    .attr("viewBox", [0, 0, width, height])
+    .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
   svg.append("g")
-      .attr("transform", `translate(${marginLeft},0)`)
-      .call(yAxis)
-      .call(g => g.select(".domain").remove())
-      .call(g => g.selectAll(".tick line").clone()
-          .attr("x2", width - marginLeft - marginRight)
-          .attr("stroke-opacity", 0.1))
-      .call(g => g.append("text")
-          .attr("x", -marginLeft)
-          .attr("y", 10)
-          .attr("fill", "currentColor")
-          .attr("text-anchor", "start")
-          .text(yLabel));
+    .attr("transform", `translate(${marginLeft},0)`)
+    .call(yAxis)
+    .call(g => g.select(".domain").remove())
+    .call(g => g.selectAll(".tick line").clone()
+      .attr("x2", width - marginLeft - marginRight)
+      .attr("stroke-opacity", 0.1))
+    .call(g => g.append("text")
+      .attr("x", -marginLeft)
+      .attr("y", 10)
+      .attr("fill", "currentColor")
+      .attr("text-anchor", "start")
+      .text(yLabel));
 
   const bar = svg.append("g")
     .selectAll("rect")
     .data(I)
     .join("rect")
-      .attr("x", i => xScale(X[i]) + xzScale(Z[i]))
-      .attr("y", i => yScale(Y[i]))
-      .attr("width", xzScale.bandwidth())
-      .attr("height", i => yScale(0) - yScale(Y[i]))
-      .attr("fill", i => zScale(Z[i]));
+    .attr("x", i => xScale(X[i]) + xzScale(Z[i]))
+    .attr("y", i => yScale(Y[i]))
+    .attr("width", xzScale.bandwidth())
+    .attr("height", i => yScale(0) - yScale(Y[i]))
+    .attr("fill", i => zScale(Z[i]));
 
   if (title) bar.append("title")
-      .text(title);
+    .text(title);
 
   svg.append("g")
-      .attr("transform", `translate(0,${height - marginBottom})`)
-      .call(xAxis);
+    .attr("transform", `translate(0,${height - marginBottom})`)
+    .call(xAxis);
 
-  return Object.assign(svg.node(), {scales: {color: zScale}});
+  return Object.assign(svg.node(), { scales: { color: zScale } });
 }

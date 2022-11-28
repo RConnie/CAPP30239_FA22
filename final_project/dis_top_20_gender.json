@@ -21,7 +21,7 @@
       "show": "Star Wars: Clone Wars",
       "sex": "Male",
       "genre": "Animation",
-      "average": 34.5
+      "average": "White"
     },
     {
       "show": "Phineas + Ferb",
@@ -33,19 +33,19 @@
       "show": "Puppy Dog Pals",
       "sex": "Animal",
       "genre": "Animation",
-      "average": 47
+      "average": "Other"
     },
     {
       "show": "Star Wars: Rebels",
-      "sex": 36,
+      "sex": "Multi",
       "genre": "Animation",
-      "average": 33
+      "average": "Multi"
     },
     {
       "show": "Wonderful World of Mickey Mouse",
       "sex": "Animal",
-      "genre": 27,
-      "average": 33
+      "genre": "Animation",
+      "average": "Other"
     },
     {
       "show": "Hannah Montana",
@@ -55,9 +55,9 @@
     },
     {
       "show": "A.N.T. Farm",
-      "sex": 31,
+      "sex": "Female",
       "genre": "Comedy",
-      "average": 26.5
+      "average": "Black"
     },
     {
       "show": "Oye Golu",
@@ -67,7 +67,7 @@
     },
     {
       "show": "Good Luck Charlie",
-      "sex": 23,
+      "sex": "Female",
       "genre": "Comedy",
       "average": "White"
     },
@@ -75,25 +75,25 @@
       "show": "Disney Animal Kingdom",
       "sex": "Animal",
       "genre": "Documentary",
-      "average": 36
+      "average": "Other"
     },
     {
       "show": "Making of: Frozen 2",
-      "sex": 63,
+      "sex": "Multi",
       "genre": "Documentary",
-      "average": 50
+      "average": "Multi"
     },
     {
       "show": "Mickey Mouse",
       "sex": "Animal",
       "genre": "Animation",
-      "average": 45
+      "average": "Other"
     },
     {
       "show": "On Pointe",
-      "sex": 70,
-      "genre": 36,
-      "average": 53
+      "sex": "Multi",
+      "genre": "Documentary",
+      "average": "Multi"
     },
     {
       "show": "Doc McStuffins",
@@ -115,8 +115,8 @@
     },
     {
       "show": "Imagineering",
-      "sex": 63,
+      "sex": "Multi",
       "genre": "Documentary",
-      "average": 48.5
+      "average": "Multi"
     }
   ]
