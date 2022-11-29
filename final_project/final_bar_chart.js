@@ -7,24 +7,24 @@
 
 d3.csv('USA_genres_2.csv').then(data => {
 
-  let ages = data.columns.slice(1);
-  let stateages = ages.flatMap(age => data.map(d => ({state: d.name, age, population: d[age]}))); // pivot longer
+  // let Genres = data.columns.slice(1);
+  // let data = Genres.flatMap(Genre => data.map(d => ({Location: d.name, Genre, Value: d[Genre]}))); // pivot longer
 
-  let group = GroupedBarChart(stateages, {
-    x: d => d.state,
-    y: d => d.population,
-    z: d => d.age,
-    xDomain: d3.groupSort(stateages, D => d3.sum(D, d => -d.population), d => d.state), 
+  let group1 = GroupedBarChart(data, {
+    x: d => d.Location,
+    y: d => d.Value,
+    z: d => d.Genre,
+    xDomain: d3.groupSort(data, D => d3.sum(D, d => -d.Value), d => d.Location), 
     yLabel: "Number of media",
-    zDomain: ages,
-    colors: d3.schemeSpectral[ages.length]
+    zDomain: Genres,
+    colors: d3.schemeSpectral[Genres.length]
     // width: 500,
     // height: 1200
   });
 
 
   // (5) APPEND TO 
-  document.getElementById("group").appendChild(group);
+  document.getElementById("group1").appendChild(group1);
 });
 
 // Locations = FileAttachment("USA_genres.csv").csv({typed: true})
