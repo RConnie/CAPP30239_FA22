@@ -1,0 +1,87 @@
+[
+    {
+      "show": 'The Simpsons',
+      "average": 'Comedy'
+      
+    },
+    {
+      "show": 'Mickey Mouse Clubhouse',
+      "average": 'Animation'
+    },
+    {
+      "show": 'Jessie',
+      "average": 'Comedy'
+      
+    },
+    {
+      "show": 'Star Wars: Clone Wars',
+      "average": 'Animation'
+    },
+    {
+      "show": 'Phineas + Ferb',
+      "average": 'Animation'
+      
+    },
+    {
+      "show": 'Puppy Dog Pals',
+      "average": 'Animation'
+    },
+    {
+      "show": 'Star Wars: Rebels',
+      "average": 'Animation'
+    },
+    {
+      "show": 'Wonderful World of Mickey Mouse',
+      "average": 'Animation'
+    },
+    {
+      "show": 'Hannah Montana',
+      "average": 'Comedy'
+      
+    },
+    {
+      "show": 'A.N.T. Farm',
+      "average": 'Comedy'
+    },
+    {
+      "show": 'Oye Golu',
+      "average": 'Animation'
+    },
+    {
+      "show": 'Good Luck Charlie',
+      "average": 'Comedy'
+      
+    },
+    {
+      "show": 'Disney Animal Kingdom',
+      "average": 'Documentary'
+    },
+    {
+      "show": 'Making of: Frozen 2',
+      "average": 'Documentary'
+    },
+    {
+      "show": 'Mickey Mouse',
+      "average": 'Animation'
+    },
+    {
+      "show": 'On Pointe',
+      "average": 'Documentary'
+    },
+    {
+      "show": 'Doc McStuffins',
+      "average": 'Animation'
+    },
+    {
+      "show": 'Bluey',
+      "average": 'Animation'
+    },
+    {
+      "show": 'Muppets Now',
+      "average": 'Other'
+    },
+    {
+      "show": 'Imagineering',
+      "average": 'Documentary'
+    }
+  ]
