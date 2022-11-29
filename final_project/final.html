@@ -23,32 +23,51 @@
     <div id="chart" class="ring"></div>
   </div>
   <p> Data taken from Kaggle user Shivam Bansal
-    <a href="https://www.kaggle.com/shivamb/datasets">Streaming Platforms Datasets</a>
+    <a href="https://www.kaggle.com/shivamb/datasets">Streaming Platforms Datasets</a> </p>
 
-    <div class="container">
-      <h2>USA Top Family Genres by Platform</h2>
-      <p>Family media broken down by genre and streaming platform.
-      </p>
-      <div id="line-chart1"></div>
-    </div>
+   
+  <div class="container">
+    <h2>USA Top Family Genres by Platform-Debug</h2>
+    <p>Family media broken down by genre and streaming platform.
+    </p>
+    <div id="group"></div>
+  </div>
     <p> Data taken from Kaggle user Shivam Bansal
-      <a href="https://www.kaggle.com/shivamb/datasets">Streaming Platforms Datasets</a>
-  
+    <a href="https://www.kaggle.com/shivamb/datasets">Streaming Platforms Datasets</a>,</p>
 
-    <div class="container">
-      <h2>Disney Top Shows of 2020</h2>
-        <p>Top Disney + shows streamed in 2020 broken down by race
-            of lead character.
-        </p>
-          <!-- <label>
-            Lead Character: 
-            <select>
-              <option value="0">Race</option>
-              <option value="1">Sex</option>
-              <option value="2">Genre</option>
-            </select> -->
-           </label>
-            <div id="bar-chart"></div>
+
+
+  <!-- <div class="container">
+    <h2>Representation in Top Disney 2020 Programs</h2>        
+    <p>Top Disney + shows streamed in 2020 broken down by demographics of lead character.</p>
+        <label>
+          Lead Character: 
+          <select>
+            <option value="0">Race</option>
+            <option value="1">Sex</option>
+            <option value="2">Genre</option>
+          </select>
+        </label>
+          <div id="donut"></div>
+      </div>
+          
+  <p> Charts were created using data from 
+    <a href="https://whatsondisneyplus.com/the-most-popular-series-on-disney-in-2020/">What's on Disney +</a>
+    and <a href="https://flixpatrol.com/">Flixpatrol</a> 
+  </p> -->
+
+  <div class="container">
+    <h2>Representation in Top Disney 2020 Programs</h2>        
+    <p>Top Disney + shows streamed in 2020 broken down by demographics of lead character.</p>
+        <!-- <label>
+          Lead Character: 
+          <select>
+            <option value="0">Race</option>
+            <option value="1">Sex</option>
+            <option value="2">Genre</option>
+          </select>
+        </label> -->
+          <div id="bee"></div>
       </div>
           
   <p> Charts were created using data from 
@@ -56,30 +75,28 @@
     and <a href="https://flixpatrol.com/">Flixpatrol</a> 
   </p>
 
-  <!-- <div class="container">
-    <h2>Top US Genres by Platform</h2>
-      <p>Top Genres of Family programs by platform.
-      </p>
-          <div id="chart1"></div>
-    </div>
-        
-<p> Charts were created using data from 
-  <a href="https://whatsondisneyplus.com/the-most-popular-series-on-disney-in-2020/">What's on Disney +</a>
-  and <a href="https://flixpatrol.com/">Flixpatrol</a> 
-</p> -->
 
 <div class="container">
-  <h2>Gender of Lead</h2>
-    <p>Gender of show lead
+  <h2>Netflix Top Family Shows of 2020</h2>
+    <p>The top streamed family shows during lockdown.
     </p>
-        <div id="chart2"></div>
+        <div id="bubble"></div>
   </div>
+  <p> Data taken from Kaggle user Prasert Kanawattanachai
+    <a href="https:www.kaggle.com/datasets/prasertk/netflix-daily-top-10-in-us?resource=download
+    ">Netflix Daily Top Ten </a></p>
+
+  
+
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="final_ring.js"></script>
-  <script src="USA_multiline.js"></script>
-  <script src="bar_basic_disney.js"></script>
+  <!-- <script src="USA_multiline.js"></script>
+  <script src="bar_basic_disney.js"></script> -->
   <script src="final_bar_chart.js"></script>
-  <script src="beeswarm.js"></script>
+  <script src="final_beeswarm.js"></script>
+  <script src="final_net_bubble.js"></script>
+  <!-- <script src="final_donut.js"></script> -->
+  <!-- <script src="final_box.js"></script> -->
 
 </body>
 </html>

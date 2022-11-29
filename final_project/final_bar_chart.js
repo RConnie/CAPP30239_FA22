@@ -1,31 +1,30 @@
+//Debug, how to add legend/key, fix text size
+
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
 // https://observablehq.com/@d3/grouped-bar-chart
 
-// let Genres = Locations.columns.slice(1);
-// let data = Genres.flatMap(Genre => Locations.map(d => ({Location: d.name, Genre, population: d[Genre]}))); // pivot longer
-// (3) IMPORT DATA (this data is from Observable example)
+
 d3.csv('USA_genres_2.csv').then(data => {
 
   let ages = data.columns.slice(1);
   let stateages = ages.flatMap(age => data.map(d => ({state: d.name, age, population: d[age]}))); // pivot longer
 
-  let chart1 = GroupedBarChart(stateages, {
+  let group = GroupedBarChart(stateages, {
     x: d => d.state,
-    y: d => d.population / 1e6,
+    y: d => d.population,
     z: d => d.age,
-    xDomain: d3.groupSort(stateages, D => d3.sum(D, d => -d.population), d => d.state).slice(0, 6), // top 6
+    xDomain: d3.groupSort(stateages, D => d3.sum(D, d => -d.population), d => d.state), 
     yLabel: "Number of media",
     zDomain: ages,
     colors: d3.schemeSpectral[ages.length],
-    width,
+    width: 500,
     height: 500
   });
 
- 
 
   // (5) APPEND TO 
-  document.getElementById("chart1").appendChild(chart1);
+  document.getElementById("group").appendChild(group);
 });
 
 // Locations = FileAttachment("USA_genres.csv").csv({typed: true})
