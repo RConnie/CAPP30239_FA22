@@ -17,9 +17,9 @@ d3.csv('USA_genres_2.csv').then(data => {
     xDomain: d3.groupSort(stateages, D => d3.sum(D, d => -d.population), d => d.state), 
     yLabel: "Number of media",
     zDomain: ages,
-    colors: d3.schemeSpectral[ages.length],
-    width: 500,
-    height: 500
+    colors: d3.schemeSpectral[ages.length]
+    // width: 500,
+    // height: 1200
   });
 
 

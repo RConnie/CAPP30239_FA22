@@ -1,51 +1,51 @@
-﻿id,value
-Cocomelon,428
-iCarly,42
-Avatar: The Last Airbender,39
-The Mitchells vs. The Machine,31
-Jurassic World Camp Cretaceous,31
-How the Grinch Stole Christmas,29
-Despicable Me 2,27
-The Grinch,24
-We Can Be Heroes,24
-The Christmas Chronicles 2,24
-The Great British Baking Show,24
-Henry Danger,22
-Wish Dragon,21
-Home,21
-Down to Earth with Zac Efron,18
-"Ricky, Nicky, Dicky, and Dawn",18
-The Baby-sitters Club,17
-The Lorax,17
-Nailed It,15
-Yes Day,15
-Go Dog Go,15
-Sharkdog,15
-The Boss Baby: Back in Business,15
-Dog Gone Trouble,14
-My Little Pony A New Generation,13
-Despicable Me ,13
-Mr Peabody and Sherman,13
-The Christmas Chronicles ,12
-Smurfs 2,12
-Fuller House,12
-Madagascar 3,12
-The Loud House Movie,10
-The Smurfs,10
-Jingle Jangle: A Christmas Journey,10
-"Sister, Sister",10
-Shrek 2,10
-The Willoughbys,10
-Cloudy with a Chance of Meatballs,10
-That Girl Lay Lay,9
-Pets United,9
-Bake Squad,9
-Maya and the Three,9
-A Boy Called Christmas,9
-Gabby's Dollhouse,9
-Finding Ohana,9
-Dennis the Mennis,9
-Secret Magic Control Agency,8
-Operations Christmas Drop,7
-Little Rascals,7
-The Bureau of Magical Things,7
+﻿show,value,rating
+Cocomelon,428,Y
+iCarly,42,G
+Avatar: The Last Airbender,39,Y7
+The Mitchells vs. The Machine,31,PG
+Jurassic World Camp Cretaceous,31,PG
+How the Grinch Stole Christmas,29,PG
+Despicable Me 2,27,PG
+The Grinch,24,PG
+We Can Be Heroes,24,PG
+The Christmas Chronicles 2,24,PG
+The Great British Baking Show,24,PG
+Henry Danger,22,G
+Wish Dragon,21,PG
+Home,21,PG
+Down to Earth with Zac Efron,18,PG
+"Ricky, Nicky, Dicky, and Dawn",18,G
+The Baby-sitters Club,17,PG
+The Lorax,17,PG
+Nailed It,15,PG
+Yes Day,15,PG
+Go Dog Go,15,Y
+Sharkdog,15,Y
+The Boss Baby: Back in Business,15,Y
+Dog Gone Trouble,14,Y7
+My Little Pony A New Generation,13,PG
+Despicable Me ,13,PG
+Mr Peabody and Sherman,13,PG
+The Christmas Chronicles ,12,PG
+Smurfs 2,12,PG
+Fuller House,12,G
+Madagascar 3,12,PG
+The Loud House Movie,10,Y7
+The Smurfs,10,PG
+Jingle Jangle: A Christmas Journey,10,PG
+"Sister, Sister",10,G
+Shrek 2,10,PG
+The Willoughbys,10,PG
+Cloudy with a Chance of Meatballs,10,PG
+That Girl Lay Lay,9,G
+Pets United,9,Y7
+Bake Squad,9,PG
+Maya and the Three,9,Y7
+A Boy Called Christmas,9,PG
+Gabby's Dollhouse,9,Y
+Finding Ohana,9,PG
+Dennis the Menance,9,PG
+Secret Magic Control Agency,8,Y7
+Operations Christmas Drop,7,G
+Little Rascals,7,PG
+The Bureau of Magical Things,7,G
