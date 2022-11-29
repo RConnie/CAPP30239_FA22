@@ -2,7 +2,7 @@ let margin = { top: 0, right: 0, bottom: 0, left: 0 },
 width = 900,
 height = 800;
 
-const tip = d3.tip()
+const tip = d3.tip()//library for building a tooltip
 .attr('class', 'd3-tip')
 .html((e,d) => d.data.name);
 
@@ -18,16 +18,16 @@ d3.json('flare.json')
 
   let color = d3.scaleOrdinal(d3.quantize(d3.interpolateSpectral, data.children.length + 1));
 
-  let partitionLayout = d3.partition()
+  let partitionLayout = d3.partition()//instead of tree using partition function layout
     .size([width, height]);
 
-  let rootNode = d3.hierarchy(data)
+  let rootNode = d3.hierarchy(data)//pass data
     .sum(d => d.value);
 
-  partitionLayout(rootNode);
+  partitionLayout(rootNode);//pass data(node)
 
   svg.selectAll('rect')
-    .data(rootNode.descendants())
+    .data(rootNode.descendants())//just descendants and not links also
     .enter()
     .append('rect')
     .attr('x', d => d.y0)

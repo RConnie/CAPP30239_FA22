@@ -9,7 +9,7 @@ d3.json('flare.json')
 
   let color = d3.scaleOrdinal(['#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c','#fdbf6f','#ff7f00','#cab2d6','#6a3d9a','#ffff99','#b15928']);
 
-  let arc = d3.arc()
+  let arc = d3.arc()//to make a circle
     .startAngle(d => d.x0)
     .endAngle(d => d.x1)
     .padAngle(d => Math.min((d.x1 - d.x0) / 2, 0.005)) //between arcs
@@ -17,21 +17,21 @@ d3.json('flare.json')
     .innerRadius(d => d.y0)
     .outerRadius(d => d.y1 - 1);
 
-  let partitionLayout = d3.partition()
+  let partitionLayout = d3.partition()//function for layout
     .size([2 * Math.PI, radius]);
 
-  let rootNode = d3.hierarchy(data)
-    .sum(d => d.value)
-    .sort((a, b) => b.value - a.value);
+  let rootNode = d3.hierarchy(data)//pass data
+    .sum(d => d.value)//summing values
+    .sort((a, b) => b.value - a.value);//sorting values
 
   partitionLayout(rootNode);
 
   svg.selectAll('path')
-    .data(rootNode.descendants())
+    .data(rootNode.descendants())//build path
     .join('path')
-    .attr('d', arc)
+    .attr('d', arc)//d from html
     .attr('fill', d => {
-      if (!d.depth) return "rgb(255,255,255)";
+      if (!d.depth) return "rgb(255,255,255)";//how to return color
       while (d.depth > 1) d = d.parent;
       return color(d.data.name);
     })
