@@ -13,7 +13,9 @@ let rScale = d3.scaleLinear()
 .range([7,35]);
 
 d3.csv("top_netflix_20.csv").then(data => {
-let colors = ['#B42F90', '#16B1AC', '#FF0909', '#6985DD', '#0BE304', '#9A303D', '#979883', '#FF09D3', '#FF7C09', '#EFE71F', '#7FA25A', '#7A57C7', '#804C13', '#C2C757', '#1F52EF'];
+//let colors = ["#9e0142","#d53e4f","#f46d43","#fdae61","#fee08b","#e6f598","#abdda4","#66c2a5","#3288bd","#5e4fa2"];
+let colors = ["#9e0142","#d53e4f","#f46d43","#fdae61"];
+
 
 console.log(data)
 
@@ -69,7 +71,7 @@ simulation.on("tick", () => {
     .attr("stroke-width", 1.5)
     .attr("r", d => (rScale(d.value)))
     .attr("fill", color)
-    .attr("opacity", 0.75)
+    //.attr("opacity", 0.75)
     .attr("cx", d => d.x)
     .attr("cy", d => d.y)
     .on("mouseover", function (event, d) {

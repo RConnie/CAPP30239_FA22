@@ -1,3 +1,5 @@
+//change colors?
+
 d3.json('final_ring.json').then((data) => {
     for (let d of data) {
       createRing(d);
@@ -31,13 +33,8 @@ d3.json('final_ring.json').then((data) => {
       .selectAll("path")
       .data(arcs)
       .join("path")
-      .attr("fill", (d, i) => d3.schemeCategory10[i])
-      //.attr("fill", (d, i) => d3.schemeSet1[i])
-      //.attr("fill", (d, i) => d3.scaleOrdinal[i])//setting color range
-      
-        //.range(['#B42F90', '#16B1AC', '#FF0909', '#6985DD', '#0BE304', '#9A303D', '#979883', '#FF09D3', '#FF7C09', '#EFE71F', '#7FA25A', '#7A57C7', '#804C13', '#C2C757', '#1F52EF'])
-        
-      //.attr("fill", (d, i) => d3.schemeSet2[i])
+      .attr("fill", (d, i) => d3.schemeCategory10[i+8])
+      //.attr("fill", ("#d53e4f", "#66c2a5"))
       .attr("d", arc);
   
     svg.append("g")

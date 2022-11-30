@@ -1,4 +1,4 @@
-//how to add legend/key, fix text size
+//Debug, how to add legend/key, fix text size, color
 
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
@@ -17,7 +17,7 @@ d3.csv('US_Genre_fin.csv').then(data => {
       xDomain: d3.groupSort(stateages, D => d3.sum(D, d => -d.population), d => d.state), 
       yLabel: "Number of media",
       zDomain: ages,
-      colors: d3.schemeSpectral[ages.length],
+      colors: d3.schemeSpectral[ages.length +1],
       //colors: d3.scaleOrdinal(ages.length)
       width: 1200,
       height: 800
