@@ -1,21 +1,30 @@
 //fix text size, add text inside bubble, missing values, circle size is reversed
 
 let width = 1200,
-  height = 500;
+  height = 525;
 
 let svg = d3.select("#cluster2")
   .append("svg")
   .attr("width", width)
   .attr("height", height);
 
-d3.csv("top_netflix_20.csv").then(data => {
+// let width = 1200,
+// height = 500,
+// //gWidth = width/4;
+
+// let svg = d3.select("#cluster2")
+//   .append("svg")
+//   .attr("width", width)
+//   .attr("height", height);
+
+d3.csv("top_netflix_int.csv").then(data => {
 
   let result = d3.group(data, d => d.rating);
 
   console.log(result);
 
   let rScale = d3.scaleLinear()
-    .range([5, 25])//5 smallest circle, 25 biggest circle, limit radius size
+    .range([1, 0.5])//5 smallest circle, 25 biggest circle, limit radius size
     .domain(d3.extent(data, d => d.value));//value sets scale
 
   let colors = d3.scaleOrdinal()//setting color range

@@ -1,4 +1,9 @@
-//how to put text inside circles, missing values, size is reverse, size of rating text
+//how to put text inside circles, missing values, 
+//circle size is reverse, size of rating text
+
+
+//append g, then append text (data join)
+//loop through csv to make sure its an interger (string to int), comment out 17
 let width = 1200,
 height = 500,
 gWidth = width/4;
@@ -9,10 +14,13 @@ let svg = d3.select("#cluster")
 .attr("height", height);
 
 let rScale = d3.scaleLinear()
-//.range([5,25]);
-.range([7,35]);
+//.range([25, 20, 15, 10, 5]);
+.range([30, 20, 10]);
+//.range([60, 17, 10, 3]);
+rScale.clamp(true);
 
-d3.csv("top_netflix_20.csv").then(data => {
+//d3.csv("top_netflix_20.csv").then(data => {
+d3.csv("top_netflix_int.csv").then(data => {
 //let colors = ["#9e0142","#d53e4f","#f46d43","#fdae61","#fee08b","#e6f598","#abdda4","#66c2a5","#3288bd","#5e4fa2"];
 let colors = ["#9e0142","#d53e4f","#f46d43","#fdae61"];
 
