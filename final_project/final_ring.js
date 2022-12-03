@@ -34,7 +34,6 @@ d3.json('final_ring.json').then((data) => {
       .data(arcs)
       .join("path")
       .attr("fill", (d, i) => d3.schemeCategory10[i+8])
-      //.attr("fill", ("#d53e4f", "#66c2a5"))
       .attr("d", arc);
   
     svg.append("g")

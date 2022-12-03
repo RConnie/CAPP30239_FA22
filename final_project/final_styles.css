@@ -25,31 +25,6 @@
     max-height: 100vh;
   }
 
-  /* .svg-tooltip {
-    background: rgba(69, 77, 93, .9);
-    border-radius: 5px;
-    color: #fff;
-    display: block;
-    font-size: 12px;
-    line-height: 16px;
-    text-transform: none;
-    max-width: 320px;
-    padding: 1rem;
-    position: absolute;
-    text-overflow: ellipsis;
-    white-space: pre;
-    z-index: 300;
-    visibility: hidden;
-  } */
-
-  /* .domain {
-    display: none;
-  }
-  
-  line {
-    stroke: #ddd;
-  } */
-
   svg text {
     font-size: 14px;
   }
@@ -66,14 +41,6 @@
     transform: translateX(-5px);
   }
 
-  /* #legend {
-    margin: 30px 0px 50px;
-  }
-
-  #legend svg {
-    margin: 0 auto;
-  } */
-
   #legend {
     margin-top: 50px
   }
@@ -81,35 +48,17 @@
   #legend svg {
     margin: 0 auto;
   }
-  /* foreignObject p {
-    font-size: 10px;
-  }
-  a { color: #369;} */
 
-  /* text {
-    font-size: 10px;
-    text-transform: uppercase;
-  } */
+  	/* Flex-Wrap Demo */
 
-  /* path.domain { display: none; }
+	.wrap-layout {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 
-  line {
-    stroke: #eee;
-    stroke-dasharray: 1px;
-  }
-
-  .country { cursor: default; }
-  
-  .country path {
-    stroke-width: 1.5;
-    opacity: 0.75;
-  }
-
-  .highlight path {
-    stroke: steelblue;
-    opacity: 1;
-  }
-
-  .highlight text { fill: steelblue; } */
-
- 
+	.wrap-layout > svg {
+		width: 30%;
+		margin: 10px;
+	}
