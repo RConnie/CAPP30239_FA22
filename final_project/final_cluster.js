@@ -8,15 +8,6 @@ let svg = d3.select("#cluster2")
   .attr("width", width)
   .attr("height", height);
 
-// let width = 1200,
-// height = 500,
-// //gWidth = width/4;
-
-// let svg = d3.select("#cluster2")
-//   .append("svg")
-//   .attr("width", width)
-//   .attr("height", height);
-
 d3.csv("top_netflix_int.csv").then(data => {
 
   let result = d3.group(data, d => d.rating);

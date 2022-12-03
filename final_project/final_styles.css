@@ -51,7 +51,7 @@
   } */
 
   svg text {
-    font-size: 6px;
+    font-size: 14px;
   }
   
   .ring svg text {
@@ -66,6 +66,21 @@
     transform: translateX(-5px);
   }
 
+  /* #legend {
+    margin: 30px 0px 50px;
+  }
+
+  #legend svg {
+    margin: 0 auto;
+  } */
+
+  #legend {
+    margin-top: 50px
+  }
+
+  #legend svg {
+    margin: 0 auto;
+  }
   /* foreignObject p {
     font-size: 10px;
   }

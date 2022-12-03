@@ -10,8 +10,8 @@ const height = 610,
 let counties;
 
 Promise.all([
-  d3.json("data/unemployment-four-years.json"),
-  d3.json("libs/counties-albers-10m.json")
+  d3.json("../choropleth/data/unemployment-four-years.json"),
+  d3.json("../choropleth/libs/counties-albers-10m.json")
 ]).then(([data, us]) => {
   counties = topojson.feature(us, us.objects.counties);
   createChart(data, "2018", '#row1');

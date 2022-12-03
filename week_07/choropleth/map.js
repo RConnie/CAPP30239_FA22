@@ -12,8 +12,8 @@ const svg = d3.select("#chart")
   .attr("viewBox", [0, 0, width, height]);
 
 Promise.all([
-  d3.csv("data/unemployment2020.csv"),
-  d3.json("libs/counties-albers-10m.json")
+  d3.csv("../choropleth/data/unemployment2020.csv"),
+  d3.json("../choropleth/lib/counties-albers-10m.json")
 ]).then(([data, us]) => {
   const dataById = {};
 
