@@ -15,14 +15,16 @@ let svg = d3.select("#cluster")
 
 let rScale = d3.scaleLinear()
 //.range([25, 20, 15, 10, 5]);
-.range([30, 20, 10]);
+.range([9, 7, 5]);
 //.range([60, 17, 10, 3]);
-rScale.clamp(true);
+//rScale.clamp(true);
 
 //d3.csv("top_netflix_20.csv").then(data => {
-d3.csv("top_netflix_int.csv").then(data => {
+// d3.csv("top_netflix_int.csv").then(data => {
+d3.csv("top_netflix_nococo.csv").then(data => {
 //let colors = ["#9e0142","#d53e4f","#f46d43","#fdae61","#fee08b","#e6f598","#abdda4","#66c2a5","#3288bd","#5e4fa2"];
-let colors = ["#9e0142","#d53e4f","#f46d43","#fdae61"];
+//let colors = ["#9e0142","#d53e4f","#f46d43","#fdae61"];
+let colors =(["#6985DD", '#B42F90', '#FF0909', "#fdae61"]);
 
 
 console.log(data)

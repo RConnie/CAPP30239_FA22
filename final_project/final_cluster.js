@@ -29,7 +29,9 @@ d3.csv("top_netflix_int.csv").then(data => {
 
   let colors = d3.scaleOrdinal()//setting color range
   //let colors = d3.schemeSpectral()
-    .range(['#B42F90', '#16B1AC', '#FF0909', '#6985DD', '#0BE304', '#9A303D', '#979883', '#FF09D3', '#FF7C09', '#EFE71F', '#7FA25A', '#7A57C7', '#804C13', '#C2C757', '#1F52EF'])
+    //.range(['#B42F90', '#16B1AC', '#FF0909', '#6985DD', '#0BE304', '#9A303D', '#979883', '#FF09D3', '#FF7C09', '#EFE71F', '#7FA25A', '#7A57C7', '#804C13', '#C2C757', '#1F52EF'])
+    //["#9e0142","#d53e4f","#f46d43","#fdae61"]
+    .range(['#6985DD', '#B42F90', '#FF0909', "#fdae61"])
     .domain(d3.map(data, d => d.rating));//map color to 3 ratings
 
   let simulation = d3.forceSimulation(data)//force funcation, pass data
