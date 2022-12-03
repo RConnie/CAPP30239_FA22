@@ -60,5 +60,5 @@ d3.json('final_ring.json').then((data) => {
       .attr("text-anchor", "middle")
       .attr("alignment-baseline", "middle")
       .text(platform)
-      .style("font-size", 19);
+      .style("font-size", 20);
   }

@@ -5,21 +5,13 @@
 // https://observablehq.com/@d3/grouped-bar-chart
 
 
-
-// d3.select("#legend")
-// .node()
-// .appendChild(
-//   Legend(d3.scaleQuantile(d3.range(1000).map(d3.randomNormal(100, 20)), d3.schemeSpectral[9]), {
-//       title: "Media Genres",
-//       tickFormat: ".0f"
-//      }))
-
 d3.select("#legend")
   .node()
   .appendChild(
   Legend(d3.scaleOrdinal(["Comedy", "Drama", "Sci-Fi", "Action", "Horror", "Documentary", "Romance", "International", "Animation"], d3.schemeSpectral[10]), {
   title: "Media Genres",
   tickSize: 0
+  
 }))
 
 d3.csv('US_Genre_fin.csv').then(data => {
@@ -32,7 +24,7 @@ d3.csv('US_Genre_fin.csv').then(data => {
       y: d => d.population/100,//or set percent
       z: d => d.age,
       xDomain: d3.groupSort(stateages, D => d3.sum(D, d => -d.population), d => d.state), 
-      yLabel: "Number of media",
+      yLabel: "Number of media (hundreds)",
       zDomain: ages,
       colors: d3.schemeSpectral[ages.length +1],
       //colors: d3.scaleOrdinal(ages.length)
@@ -45,15 +37,6 @@ d3.csv('US_Genre_fin.csv').then(data => {
     document.getElementById("group").appendChild(group);
   });
   
-  // Locations = FileAttachment("USA_genres.csv").csv({typed: true})
-  
-  // Genre = Locations.columns.slice(1)
-  
-  // LocationGenre = Genre.flatMap(Genre => Locations.map(d => ({Location: d.name, Genre, Value: d[Genre]}))) // pivot longer
-  
-  // Copyright 2021 Observable, Inc.
-  // Released under the ISC license.
-  // https://observablehq.com/@d3/grouped-bar-chart
   
   // Copyright 2021 Observable, Inc.
   // Released under the ISC license.
@@ -79,7 +62,8 @@ d3.csv('US_Genre_fin.csv').then(data => {
     zPadding = 0.05, // amount of x-range to reserve to separate bars
     yFormat, // a format specifier string for the y-axis
     yLabel, // a label for the y-axis
-    colors = d3.schemeTableau10, // array of colors
+    //colors = d3.schemeTableau10, // array of colors
+    colors = d3.schemeSpectral[10]
   } = {}) {
     // Compute values.
     const X = d3.map(data, x);
@@ -169,13 +153,15 @@ d3.csv('US_Genre_fin.csv').then(data => {
 function Legend(color, {
   title,
   tickSize = 6,
-  width = 320, 
+  //width = 320, 
+  width = 850, 
   height = 44 + tickSize,
   marginTop = 18,
   marginRight = 0,
   marginBottom = 16 + tickSize,
   marginLeft = 0,
   ticks = width / 64,
+  //ticks = width / 20,
   tickFormat,
   tickValues
 } = {}) {
@@ -309,6 +295,7 @@ function Legend(color, {
         .attr("font-weight", "bold")
         .attr("class", "title")
         .text(title));
+        //.style("font-size", 6);
 
   return svg.node();
 }
