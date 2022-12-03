@@ -3,8 +3,8 @@
 
 d3.csv("top_netflix_int.csv").then(data => {
 
-  let width = 1200,
-  height = 525;
+  let width = 1000,
+  height = 500;
 
   let svg = d3.select("#cluster2")
     .append("svg")
@@ -16,7 +16,10 @@ d3.csv("top_netflix_int.csv").then(data => {
   console.log(result);
 
   let rScale = d3.scaleLinear()
-    .range([0.75, 0.25])//5 smallest circle, 25 biggest circle, limit radius size
+    //.range([0.75, 0.25])//5 smallest circle, 25 biggest circle, limit radius size
+    //.range([18, 17, 16, 1,5, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1])
+    .range([9.25, 9.0, 8.75, 8.5, 8.25, 8.0, 7.75, 7.5, 7.25, 7.0, 
+      6.75, 6.5, 6.25, 6.0, 5.75, 5.5, 5.25, 5.0, 4.75, 4.5, 4.25])
     .domain(d3.extent(data, d => d.value));//value sets scale
 
   let colors = d3.scaleOrdinal()//setting color range
