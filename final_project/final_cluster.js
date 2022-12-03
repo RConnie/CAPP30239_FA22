@@ -1,21 +1,22 @@
 //fix text size, add text inside bubble, missing values, circle size is reversed
 
-let width = 1200,
-  height = 525;
-
-let svg = d3.select("#cluster2")
-  .append("svg")
-  .attr("width", width)
-  .attr("height", height);
 
 d3.csv("top_netflix_int.csv").then(data => {
 
+  let width = 1200,
+  height = 525;
+
+  let svg = d3.select("#cluster2")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+  
   let result = d3.group(data, d => d.rating);
 
   console.log(result);
 
   let rScale = d3.scaleLinear()
-    .range([1, 0.5])//5 smallest circle, 25 biggest circle, limit radius size
+    .range([0.75, 0.25])//5 smallest circle, 25 biggest circle, limit radius size
     .domain(d3.extent(data, d => d.value));//value sets scale
 
   let colors = d3.scaleOrdinal()//setting color range
@@ -65,12 +66,12 @@ d3.csv("top_netflix_int.csv").then(data => {
       })
   })
 
-  for (let i = 0; i < 100; i++) {//slows down out to in, zooming at beginning
+  for (let i = 0; i < 200; i++) {//slows down out to in, zooming at beginning
     simulation.tick()
   }
 });
 
-const tooltip = d3.select("body").append("div")
-  .attr("class", "svg-tooltip")
-  .style("position", "absolute")
-  .style("visibility", "hidden");
+// const tooltip = d3.select("body").append("div")
+//   .attr("class", "svg-tooltip")
+//   .style("position", "absolute")
+//   .style("visibility", "hidden");

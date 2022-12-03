@@ -3,30 +3,45 @@
 // Code taken from : https://d3-graph-gallery.com/graph/lollipop_animationStart.html
 // from a document by Yan Holtz. 
 
+//d3.csv("disney_racesex.csv").then (data) => {
+
     // set the dimensions and margins of the graph
-    // var margin = {top: 10, right: 30, bottom: 40, left: 100},
+    // let margin = {top: 10, right: 30, bottom: 40, left: 100},
     //     width = 460 - margin.left - margin.right,
     //     height = 500 - margin.top - margin.bottom;
     
-    // append the svg object to the body of the page
-    // let width = 1200,
-    // height = 500;
-        
-    let svg = d3.select("#my_dataviz")
-        .append("svg")
-        .attr("width", width)
-        .attr("height", height);
-
-    // Parse the Data
-    d3.csv("disney_racesex.csv", function(data) {
+    // // append the svg object to the body of the page
+    // let svg = d3.select("#my_dataviz")
+    //   .append("svg")
+    //     .attr("width", width + margin.left + margin.right)
+    //     .attr("height", height + margin.top + margin.bottom)
+    //   .append("g")
+    //     .attr("transform",
+    //           "translate(" + margin.left + "," + margin.top + ")");
     
+    // Parse the Data
+   
+    d3.csv("disney_racesex.csv").then(data => {
+
+        let margin = {top: 10, right: 30, bottom: 40, left: 100},
+        width = 460 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+    
+    // append the svg object to the body of the page
+        let svg = d3.select("#my_dataviz")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
     // sort data
-    data.sort(function(b, a) {
-      return a.Value - b.Value;
-    });
+        data.sort(function(b, a) {
+        return a.Value - b.Value;
+        });
     
     // Add X axis
-    let x = d3.scaleLinear()
+    var x = d3.scaleLinear()
         .domain([0, 10])
         .range([ 0, width]);
     svg.append("g")
@@ -37,11 +52,11 @@
         .style("text-anchor", "end");
     
     // Y axis
-    let y = d3.scaleBand()
+    var y = d3.scaleBand()
         .range([ 0, height ])
         .domain(data.map(function(d) { return d.Name; }))
         .padding(1);
-    svg.append("g")
+        svg.append("g")
         .call(d3.axisLeft(y))
     
     // Lines
@@ -63,9 +78,10 @@
         .attr("cx", x(0) )
         .attr("cy", function(d) { return y(d.Name); })
         .attr("r", "7")
+        //.style("fill", "#e6f598")
         .style("fill", "#66c2a5")
         .attr("stroke", "#abdda4")
-        
+        //["#9e0142","#d53e4f","#f46d43","#fdae61","#fee08b","#e6f598","#abdda4","#66c2a5","#3288bd","#5e4fa2"]
     // Change the X coordinates of line and circle
     svg.selectAll("circle")
       .transition()
@@ -77,6 +93,4 @@
       .duration(2000)
       .attr("x1", function(d) { return x(d.Value); })
     
-    });
-    
-   
+    })                  

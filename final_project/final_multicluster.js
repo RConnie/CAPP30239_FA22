@@ -5,8 +5,8 @@
 //append g, then append text (data join)
 //loop through csv to make sure its an interger (string to int), comment out 17
 let width = 1200,
-height = 500,
-gWidth = width/4;
+height = 550,
+gWidth = width/4.5;
 
 let svg = d3.select("#cluster")
 .append("svg")
@@ -109,7 +109,7 @@ g.append("text")
   .style("text-transform","capitalize")
   .style("font-weight","bold");
 
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 100; i++) {
   simulation.tick()
 }
 
