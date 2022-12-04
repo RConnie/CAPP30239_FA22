@@ -1,4 +1,4 @@
-//Code taken from Observable and class code notes
+//Code modified from Observable and class code notes
 
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.

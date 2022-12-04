@@ -1,9 +1,5 @@
-//how to put text inside circles, missing values, 
-//circle size is reverse, size of rating text
+//Code modified from class and office hour notes
 
-
-//append g, then append text (data join)
-//loop through csv to make sure its an interger (string to int), comment out 17
 let width = 1200,
 height = 550,
 gWidth = width/4.5;
@@ -14,30 +10,18 @@ let svg = d3.select("#cluster")
 .attr("height", height);
 
 let rScale = d3.scaleLinear()
-//.range([25, 20, 15, 10, 5]);
 .range([9, 7, 5]);
-//.range([60, 17, 10, 3]);
-//rScale.clamp(true);
 
-//d3.csv("top_netflix_20.csv").then(data => {
-// d3.csv("top_netflix_int.csv").then(data => {
-d3.csv("top_netflix_nococo.csv").then(data => {
-//let colors = ["#9e0142","#d53e4f","#f46d43","#fdae61","#fee08b","#e6f598","#abdda4","#66c2a5","#3288bd","#5e4fa2"];
-//let colors = ["#9e0142","#d53e4f","#f46d43","#fdae61"];
+d3.csv("../final_project/final datasets/top_netflix_nococo.csv").then(data => {
+//selected colors from d3 color scheme
 let colors =(["#6985DD", '#B42F90', '#FF0909', "#fdae61"]);
 
-
-console.log(data)
-
 let result = d3.group(data, d => d.rating);
-
-console.log(result)
 
 rScale.domain(d3.extent(data, d => d.value));
 
 let i = 0;
 for (let [a, b] of result) {
-  // console.log(b)
 
   let items = [];
 
@@ -81,7 +65,6 @@ simulation.on("tick", () => {
     .attr("stroke-width", 1.5)
     .attr("r", d => (rScale(d.value)))
     .attr("fill", color)
-    //.attr("opacity", 0.75)
     .attr("cx", d => d.x)
     .attr("cy", d => d.y)
     .on("mouseover", function (event, d) {

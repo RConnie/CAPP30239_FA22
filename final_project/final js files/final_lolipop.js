@@ -1,5 +1,5 @@
 
-// Code taken from : https://d3-graph-gallery.com/graph/lollipop_animationStart.html
+// Code modified from: https://d3-graph-gallery.com/graph/lollipop_animationStart.html
 // from a document by Yan Holtz. 
 
 

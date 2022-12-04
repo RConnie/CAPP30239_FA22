@@ -1,4 +1,4 @@
-//outline of code taken from class examples
+//Code modified from class notes
 
 d3.json("../final_project/final datasets/final_ring.json").then((data) => {
     for (let d of data) {

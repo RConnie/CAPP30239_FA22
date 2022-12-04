@@ -1,7 +1,7 @@
-//fix text size, add text inside bubble, missing values, circle size is reversed
+//Code modified from class notes
 
 
-d3.csv("top_netflix_int.csv").then(data => {
+d3.csv("../final_project/final datasets/top_netflix.csv").then(data => {
 
   let width = 1000,
   height = 500;
@@ -16,18 +16,15 @@ d3.csv("top_netflix_int.csv").then(data => {
   console.log(result);
 
   let rScale = d3.scaleLinear()
-    //.range([0.75, 0.25])//5 smallest circle, 25 biggest circle, limit radius size
-    //.range([18, 17, 16, 1,5, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1])
+  // manually set range to achieve correct aspect ration for MPAA categories
     .range([9.25, 9.0, 8.75, 8.5, 8.25, 8.0, 7.75, 7.5, 7.25, 7.0, 
       6.75, 6.5, 6.25, 6.0, 5.75, 5.5, 5.25, 5.0, 4.75, 4.5, 4.25])
     .domain(d3.extent(data, d => d.value));//value sets scale
 
   let colors = d3.scaleOrdinal()//setting color range
-  //let colors = d3.schemeSpectral()
-    //.range(['#B42F90', '#16B1AC', '#FF0909', '#6985DD', '#0BE304', '#9A303D', '#979883', '#FF09D3', '#FF7C09', '#EFE71F', '#7FA25A', '#7A57C7', '#804C13', '#C2C757', '#1F52EF'])
-    //["#9e0142","#d53e4f","#f46d43","#fdae61"]
+  //chose colors from color scheme range 
     .range(['#6985DD', '#B42F90', '#FF0909', "#fdae61"])
-    .domain(d3.map(data, d => d.rating));//map color to 3 ratings
+    .domain(d3.map(data, d => d.rating));
 
   let simulation = d3.forceSimulation(data)//force funcation, pass data
     .force("charge", d3.forceManyBody().strength(1000)) //strength & speed?
@@ -46,7 +43,6 @@ d3.csv("top_netflix_int.csv").then(data => {
       .attr("stroke", "#fff")
       .attr("stroke-width", 1.5)
       .attr("r", d => rScale(d.value))
-      // .attr("fill", "red")
       .attr("fill", d => colors(d.rating))
       .attr("opacity", 0.75)
       .attr("cx", d => d.x)
@@ -56,7 +52,9 @@ d3.csv("top_netflix_int.csv").then(data => {
 
         tooltip
           .style("visibility", "visible")
-          .html(`<h3>${d.show}</h3><br />value: ${d.value + " " + "days"}<br /><span style="text-transform: capitalize">MPPA rating: ${d.rating}</span>`);
+          //added value of days and MPAA ratings
+          .html(`<h3>${d.show}</h3><br />value: ${d.value + " " + "days"}<br 
+          /><span style="text-transform: capitalize">MPPA rating: ${d.rating}</span>`);
       })
       .on("mousemove", function (event) {
         tooltip
@@ -73,8 +71,3 @@ d3.csv("top_netflix_int.csv").then(data => {
     simulation.tick()
   }
 });
-
-// const tooltip = d3.select("body").append("div")
-//   .attr("class", "svg-tooltip")
-//   .style("position", "absolute")
-//   .style("visibility", "hidden");
