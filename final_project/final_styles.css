@@ -6,16 +6,6 @@
     font-size: 1em;
   }
 
-  /* .container {
-    width: 1040px;
-    margin: 0 auto;
-    text-align: center;
-  } */
-  /* .container {
-    margin: 0 auto;
-    max-width: 1200px;
-    text-align: center;
-  } */
 
   .container {
     width: 1040px;
@@ -26,24 +16,20 @@
     text-align: center;
   }
 
-  /* h3 {
-    margin-bottom: 0px;
-    padding-bottom: 10px;
-  } */
+  h5 {
+    text-align: right;
+  }
 
-  /* p {
-    font-size: 16px;
-    text-transform: none;
-    max-width: 700px;
-    text-align: left;
-  } */
+  h3 {
+    text-align: center;
+  }
+
 
   p {
     font-size: 1em;
   }
   #chart {
     width: 100%;
-    /* text-align: right; */
   }
 
   svg {
@@ -61,13 +47,6 @@
   .loli svg text {
     font-size: 10px;
   }
-  /* .x-axis text {
-    transform: translateY(5px);
-  }
-  
-  .y-axis text {
-    transform: translateX(-5px);
-  } */
 
   #legend {
     margin-top: 50px;
@@ -81,17 +60,3 @@
   #legend svg text {
     font-size: 14px;
   }
-
-  	/* Flex-Wrap Demo */
-
-	/* .wrap-layout {
-		width: 100%;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	.wrap-layout > svg {
-		width: 30%;
-		margin: 10px;
-	} */
