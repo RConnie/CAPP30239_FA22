@@ -1,34 +1,16 @@
-//DeBug
 
 // Code taken from : https://d3-graph-gallery.com/graph/lollipop_animationStart.html
 // from a document by Yan Holtz. 
 
-//d3.csv("disney_racesex.csv").then (data) => {
 
-    // set the dimensions and margins of the graph
-    // let margin = {top: 10, right: 30, bottom: 40, left: 100},
-    //     width = 460 - margin.left - margin.right,
-    //     height = 500 - margin.top - margin.bottom;
-    
-    // // append the svg object to the body of the page
-    // let svg = d3.select("#my_dataviz")
-    //   .append("svg")
-    //     .attr("width", width + margin.left + margin.right)
-    //     .attr("height", height + margin.top + margin.bottom)
-    //   .append("g")
-    //     .attr("transform",
-    //           "translate(" + margin.left + "," + margin.top + ")");
-    
-    // Parse the Data
-   
-    d3.csv("disney_racesex.csv").then(data => {
+    d3.csv("../final_project/final datasets/disney_racesex.csv").then(data => {
 
         let margin = {top: 10, right: 30, bottom: 40, left: 100},
         width = 1000 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
     
     // append the svg object to the body of the page
-        let svg = d3.select("#my_dataviz")
+        let svg = d3.select("#lolipop")
       .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
