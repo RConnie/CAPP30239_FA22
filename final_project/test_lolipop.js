@@ -24,7 +24,7 @@
     d3.csv("disney_racesex.csv").then(data => {
 
         let margin = {top: 10, right: 30, bottom: 40, left: 100},
-        width = 460 - margin.left - margin.right,
+        width = 1000 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
     
     // append the svg object to the body of the page
@@ -41,7 +41,7 @@
         });
     
     // Add X axis
-    var x = d3.scaleLinear()
+    let x = d3.scaleLinear()
         .domain([0, 10])
         .range([ 0, width]);
     svg.append("g")
@@ -52,7 +52,7 @@
         .style("text-anchor", "end");
     
     // Y axis
-    var y = d3.scaleBand()
+    let y = d3.scaleBand()
         .range([ 0, height ])
         .domain(data.map(function(d) { return d.Name; }))
         .padding(1);
@@ -77,7 +77,7 @@
         .append("circle")
         .attr("cx", x(0) )
         .attr("cy", function(d) { return y(d.Name); })
-        .attr("r", "7")
+        .attr("r", "10")
         //.style("fill", "#e6f598")
         .style("fill", "#66c2a5")
         .attr("stroke", "#abdda4")
