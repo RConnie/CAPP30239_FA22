@@ -1,6 +1,6 @@
-//change colors?
+//outline of code taken from class examples
 
-d3.json('final_ring.json').then((data) => {
+d3.json("../final_project/final datasets/final_ring.json").then((data) => {
     for (let d of data) {
       createRing(d);
     }
@@ -33,7 +33,8 @@ d3.json('final_ring.json').then((data) => {
       .selectAll("path")
       .data(arcs)
       .join("path")
-      .attr("fill", (d, i) => d3.schemeCategory10[i+8])
+      //change color to match color scheme of other charts
+      .attr("fill", (d, i) => d3.schemeCategory10[i+8]) 
       .attr("d", arc);
   
     svg.append("g")

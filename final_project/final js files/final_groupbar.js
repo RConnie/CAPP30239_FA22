@@ -1,4 +1,4 @@
-//Debug, how to add legend/key, fix text size, color
+//Code taken from Observable and class code notes
 
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
@@ -8,32 +8,32 @@
 d3.select("#legend")
   .node()
   .appendChild(
-  Legend(d3.scaleOrdinal(["Comedy", "Drama", "Sci-Fi", "Action", "Horror", "Documentary", "Romance", "International", "Animation"], d3.schemeSpectral[10]), {
+  Legend(d3.scaleOrdinal(["Comedy", "Drama", "Sci-Fi", "Action", "Horror", 
+  "Documentary", "Romance", "International", "Animation"], d3.schemeSpectral[10]), {
   title: "Media Genres",
   tickSize: 0
   
 }))
 
-d3.csv('US_Genre_fin.csv').then(data => {
+d3.csv("../final_project/final datasets/US_Genre.csv").then(data => {
 
-    let ages = data.columns.slice(1);
-    let stateages = ages.flatMap(age => data.map(d => ({state: d.name, age, population: d[age]}))); // pivot longer
+    let genres = data.columns.slice(1);
+    let platformgenres = genres.flatMap(genre => data.map(d => 
+      ({platform: d.name, genre, value: d[genre]}))); // pivot longer
   
-    let group = GroupedBarChart(stateages, {
-      x: d => d.state,
-      y: d => d.population/100,//or set percent
-      z: d => d.age,
-      xDomain: d3.groupSort(stateages, D => d3.sum(D, d => -d.population), d => d.state), 
+    let group = GroupedBarChart(platformgenres, {
+      x: d => d.platform,
+      //Disney dataset was so much larger I had to scale down
+      y: d => d.value/100,
+      z: d => d.genre,
+      xDomain: d3.groupSort(platformgenres, D => d3.sum(D, d => -d.value), d => d.platform), 
       yLabel: "Number of media (hundreds)",
-      zDomain: ages,
-      colors: d3.schemeSpectral[ages.length +1],
-      //colors: d3.scaleOrdinal(ages.length)
+      zDomain: genres,
+      colors: d3.schemeSpectral[genres.length +1],
       width: 1200,
       height: 800
     });
   
-  
-    // (5) APPEND TO 
     document.getElementById("group").appendChild(group);
   });
   
@@ -127,15 +127,6 @@ d3.csv('US_Genre_fin.csv').then(data => {
       .attr("width", xzScale.bandwidth())
       .attr("height", i => yScale(0) - yScale(Y[i]))
       .attr("fill", i => zScale(Z[i]));
-
-
-    // svg.append("text")
-    //   .attr("font-size", 16)
-    //   .attr("font-weight", "bold")
-    //   .attr("text-anchor", "middle")
-    //   .attr("alignment-baseline", "middle")
-    //   .text(state)
-    //   .style("font-size", 19);
   
     if (title) bar.append("title")
       .text(title);
@@ -161,7 +152,6 @@ function Legend(color, {
   marginBottom = 16 + tickSize,
   marginLeft = 0,
   ticks = width / 64,
-  //ticks = width / 20,
   tickFormat,
   tickValues
 } = {}) {
@@ -194,7 +184,7 @@ function Legend(color, {
 
     x = color.copy().rangeRound(d3.quantize(d3.interpolate(marginLeft, width - marginRight), n));
 
-    svg.append("image")
+    svg.append("imgenre")
         .attr("x", marginLeft)
         .attr("y", marginTop)
         .attr("width", width - marginLeft - marginRight)
@@ -209,7 +199,7 @@ function Legend(color, {
         .interpolator(d3.interpolateRound(marginLeft, width - marginRight)),
         {range() { return [marginLeft, width - marginRight]; }});
 
-    svg.append("image")
+    svg.append("imgenre")
         .attr("x", marginLeft)
         .attr("y", marginTop)
         .attr("width", width - marginLeft - marginRight)
