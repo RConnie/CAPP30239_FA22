@@ -16,10 +16,10 @@
     text-align: center;
   }
 
-  #chart {
+  /* #chart {
     width: 100%;
     text-align: center;
-  }
+  } */
 
   svg {
     max-height: 100vh;
@@ -33,13 +33,13 @@
     font-size: 9px;
   }
 
-  .x-axis text {
+  /* .x-axis text {
     transform: translateY(5px);
   }
   
   .y-axis text {
     transform: translateX(-5px);
-  }
+  } */
 
   #legend {
     margin-top: 50px

@@ -88,7 +88,7 @@ simulation.on("tick", () => {
       d3.select(this).attr("opacity", 1);
       tooltip
         .style("visibility", "visible")
-        .html(`${d.node}<br />${d.value}`);
+        .html(`${d.node}<br />${d.value + " " + "days"}`);
     })
     .on("mousemove", function (event) {
       tooltip

@@ -56,7 +56,7 @@ d3.csv("top_netflix_int.csv").then(data => {
 
         tooltip
           .style("visibility", "visible")
-          .html(`<h3>${d.show}</h3><br />value: ${d.value}<br /><span style="text-transform: capitalize">Literary rating: ${d.rating}</span>`);
+          .html(`<h3>${d.show}</h3><br />value: ${d.value + " " + "days"}<br /><span style="text-transform: capitalize">MPPA rating: ${d.rating}</span>`);
       })
       .on("mousemove", function (event) {
         tooltip
