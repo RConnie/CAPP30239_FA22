@@ -8,7 +8,7 @@ d3.json('final_ring.json').then((data) => {
   
   function createRing({ platform, values }) {
     const height = 250,
-      width = 300,
+      width = 450,
       innerRadius = 45,
       outerRadius = 65,
       labelRadius = 95;
