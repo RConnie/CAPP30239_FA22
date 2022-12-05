@@ -30,7 +30,7 @@
 
   <div class="container">
     <!-- <h2>Media Categories by Streaming Platform</h2> -->
-    <h2>Streaming Platforms Ratings Breakdown</h2>
+    <h2>Streaming Platforms Breakdown by Parental Guidelines</h2>
     <p>Percentage of family media compared to adult media per platform. Family media is
       defined as all programming rated PG and under.  Adult media is rated PG-13 and higher.
     </p>
@@ -47,6 +47,7 @@
   <div class="container">
     <h2>USA Top Family Genres by Platform</h2>
     <p>Family media broken down by genre and streaming platform.
+      Number of media per genre by 100 (ex: 4.5 = 450 programs)
     </p>
     <div id="legend"></div>
     <p> </p>
@@ -63,8 +64,9 @@
 
 
   <div class="container">
-    <h2>Representation in Top Disney 2020 Programs</h2>        
-    <p>Top Disney + shows streamed in 2020 broken down by demographics of lead character(s).</p>
+    <h2>Representation in Disney 2020 Top Programs</h2>        
+    <p>The 20 top Disney + programs streamed in 2020 broken down by demographics (race and gender representation)
+       of lead character(s).</p>
     <div id="lolipop" class="loli"></div>
  
           
@@ -79,21 +81,30 @@
 
 
   <div class="container">
-  <h2>Netflix Top Family Shows of 2020</h2>
+  <h2>Netflix Top Family Programs of 2020</h2>
     <!-- <p>The top streamed family shows during lockdown.
     </p> -->
     
-    <p>Netflix is one of the most well known names in streaming platforms.
+    <p>Netflix is one of the most well known names in streaming platforms and they document
+      their daily top ten programs.  Below are the top 50 family programs that made the daily 
+      top 10 and how many days the were on the list.
     </p>
     <h3>Top 50 programs streamed during 2020</h3>
-    <p>Hover over to see program title, genre, and how mamy days it was in the top 10.</p>
+    <p>Repreentation of all 50 programs. Hover over to see program title, genre, and how mamy 
+      days it was in the top 10.</p>
       <div id="cluster2"></div>
 
-    <h3>Top programs broken down by MPAA ratings*</h3>
+    <h3>Top programs broken down by Parental Guidance Ratings* 
+    </h3>
+    <p>
+      Ratings are: 
+      Y - appropriate for children of all ages, Y7 -suitable for childer 7 and older,
+      G - appropriate for people of all ages, PG - Parental guidance suggested</p>
     <!-- <h5> *Does not include Cocomelon</h5> -->
     <div id="cluster"></div>
 
-    <h5> *Does not include Cocomelon</h5>
+    <h5> *Does not include Cocomelon to preserve aspect ration, as it was an outlier
+      that was on the top 10 for 428 days, the next ranked show was iCarly at 42 days.</h5>
     <p> Data taken from Kaggle user Prasert Kanawattanachai
       <a href="https:www.kaggle.com/datasets/prasertk/netflix-daily-top-10-in-us?resource=download
       ">Netflix Daily Top Ten </a>
