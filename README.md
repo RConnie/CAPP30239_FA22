@@ -1,10 +1,12 @@
-Last updated: 20 November 2022
+Last updated: 5 December 2022
 
 This repo is being used for a Univeristy of Chiacgo's Data Visualization course (CAPP30239_FA22).  The code is used for class assignments and for use as the owner's portfolio.  This file will be updated as the course progresses.  At this time it is not open to contributions outside of the University.
 
 Lastest update: 
 
-Very rough drafts of final graphs for Alpha Gen project found in <a href="https://rconnie.github.io/CAPP30239_FA22/final_project/final.html">final_project</a> 
+Final project completed.  Link to final webpage can be found here: <a href="https://rconnie.github.io/CAPP30239_FA22/final_project/final.html">Screen Time: Family Media During the Pandemic</a>
+
+
 
 
 Quick Links: 
